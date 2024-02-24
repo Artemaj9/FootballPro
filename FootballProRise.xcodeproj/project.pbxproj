@@ -11,6 +11,12 @@
 		AC2AD4022B86B6D600BC2183 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD4012B86B6D600BC2183 /* ContentView.swift */; };
 		AC2AD4042B86B6D900BC2183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD4032B86B6D900BC2183 /* Assets.xcassets */; };
 		AC2AD4072B86B6D900BC2183 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD4062B86B6D900BC2183 /* Preview Assets.xcassets */; };
+		AC2AD4102B86B89400BC2183 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD40F2B86B89400BC2183 /* Text.swift */; };
+		AC2AD4792B89379100BC2183 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD4782B89379100BC2183 /* CarouselView.swift */; };
+		AC2AD47B2B89468700BC2183 /* CarouselLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD47A2B89468700BC2183 /* CarouselLogic.swift */; };
+		AC2AD47D2B89FEF700BC2183 /* Spartan-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD47C2B89FEF700BC2183 /* Spartan-ExtraBold.ttf */; };
+		AC2AD47F2B89FF0600BC2183 /* Spartan-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD47E2B89FF0600BC2183 /* Spartan-Regular.ttf */; };
+		AC2AD4832B8A01DE00BC2183 /* Spartan-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD4822B8A01DE00BC2183 /* Spartan-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,13 @@
 		AC2AD4012B86B6D600BC2183 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC2AD4032B86B6D900BC2183 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC2AD4062B86B6D900BC2183 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AC2AD40F2B86B89400BC2183 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		AC2AD4782B89379100BC2183 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		AC2AD47A2B89468700BC2183 /* CarouselLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselLogic.swift; sourceTree = "<group>"; };
+		AC2AD47C2B89FEF700BC2183 /* Spartan-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spartan-ExtraBold.ttf"; sourceTree = "<group>"; };
+		AC2AD47E2B89FF0600BC2183 /* Spartan-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spartan-Regular.ttf"; sourceTree = "<group>"; };
+		AC2AD4802B89FF2700BC2183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AC2AD4822B8A01DE00BC2183 /* Spartan-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spartan-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +64,12 @@
 		AC2AD3FE2B86B6D600BC2183 /* FootballProRise */ = {
 			isa = PBXGroup;
 			children = (
+				AC2AD4802B89FF2700BC2183 /* Info.plist */,
 				AC2AD3FF2B86B6D600BC2183 /* FootballProRiseApp.swift */,
 				AC2AD4012B86B6D600BC2183 /* ContentView.swift */,
+				AC2AD4812B89FF6400BC2183 /* Screens */,
+				AC2AD4772B89376100BC2183 /* Components */,
+				AC2AD40D2B86B84100BC2183 /* Resources */,
 				AC2AD4032B86B6D900BC2183 /* Assets.xcassets */,
 				AC2AD4052B86B6D900BC2183 /* Preview Content */,
 			);
@@ -65,6 +82,41 @@
 				AC2AD4062B86B6D900BC2183 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AC2AD40D2B86B84100BC2183 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC2AD40E2B86B84E00BC2183 /* Fonts */,
+				AC2AD40F2B86B89400BC2183 /* Text.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AC2AD40E2B86B84E00BC2183 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AC2AD47C2B89FEF700BC2183 /* Spartan-ExtraBold.ttf */,
+				AC2AD4822B8A01DE00BC2183 /* Spartan-Bold.ttf */,
+				AC2AD47E2B89FF0600BC2183 /* Spartan-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AC2AD4772B89376100BC2183 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AC2AD4782B89379100BC2183 /* CarouselView.swift */,
+				AC2AD47A2B89468700BC2183 /* CarouselLogic.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AC2AD4812B89FF6400BC2183 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +179,9 @@
 			files = (
 				AC2AD4072B86B6D900BC2183 /* Preview Assets.xcassets in Resources */,
 				AC2AD4042B86B6D900BC2183 /* Assets.xcassets in Resources */,
+				AC2AD47D2B89FEF700BC2183 /* Spartan-ExtraBold.ttf in Resources */,
+				AC2AD47F2B89FF0600BC2183 /* Spartan-Regular.ttf in Resources */,
+				AC2AD4832B8A01DE00BC2183 /* Spartan-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2AD47B2B89468700BC2183 /* CarouselLogic.swift in Sources */,
 				AC2AD4022B86B6D600BC2183 /* ContentView.swift in Sources */,
+				AC2AD4102B86B89400BC2183 /* Text.swift in Sources */,
+				AC2AD4792B89379100BC2183 /* CarouselView.swift in Sources */,
 				AC2AD4002B86B6D600BC2183 /* FootballProRiseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +333,12 @@
 				DEVELOPMENT_TEAM = 482344W3R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FootballProRise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +363,12 @@
 				DEVELOPMENT_TEAM = 482344W3R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FootballProRise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

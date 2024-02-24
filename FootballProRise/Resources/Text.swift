@@ -1,8 +1,5 @@
 //
 //  Text.swift
-//  FootballProRise
-//
-//  Created by Artem on 22.02.2024.
 //
 
 import Foundation
@@ -10,26 +7,21 @@ import Foundation
 enum WelcomeTxt {
     static let welcomeTitle = "Welcome!"
     static let welcome = "It's time to start your journey towards becoming a legendary football player."
-    
     static let title  = "Before we kick off,"
     static  let kicksub = "let's create your football player."
-    
     static let kickOff = "Choose an avatar that represents your character."
-    
     static let great = "Great!"
-    
     static let greatdescr = "Next, please, introduce\nyour player."
-    
-
 }
 
 enum InfoTxt {
    static let welcome =  "Welcome to a one-of-a-kind journey where you shape a football player's destiny!"
-
+    
     static let subTitle = """
     "Experience the thrill of rising through
     7 challenging stages, from the minor leagues to stardom in the major leagues.
     """
+    
     static let body =
     """
 Train your player's strength, speed, endurance, and football knowledge with exciting quizzes, and watch them transform into a football legend.

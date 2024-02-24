@@ -17,6 +17,12 @@
 		AC2AD47D2B89FEF700BC2183 /* Spartan-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD47C2B89FEF700BC2183 /* Spartan-ExtraBold.ttf */; };
 		AC2AD47F2B89FF0600BC2183 /* Spartan-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD47E2B89FF0600BC2183 /* Spartan-Regular.ttf */; };
 		AC2AD4832B8A01DE00BC2183 /* Spartan-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD4822B8A01DE00BC2183 /* Spartan-Bold.ttf */; };
+		AC2AD4852B8A05CB00BC2183 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD4842B8A05CB00BC2183 /* Splash.swift */; };
+		AC2AD4882B8A063400BC2183 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD4872B8A063400BC2183 /* UserDefaults.swift */; };
+		AC2AD48B2B8A086400BC2183 /* Image+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD48A2B8A086400BC2183 /* Image+ext.swift */; };
+		AC2AD48D2B8A452D00BC2183 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD48C2B8A452D00BC2183 /* Welcome.swift */; };
+		AC2AD48F2B8A473900BC2183 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD48E2B8A473900BC2183 /* Fonts.swift */; };
+		AC2AD4912B8A6F5C00BC2183 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD4902B8A6F5C00BC2183 /* GameLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		AC2AD47E2B89FF0600BC2183 /* Spartan-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spartan-Regular.ttf"; sourceTree = "<group>"; };
 		AC2AD4802B89FF2700BC2183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AC2AD4822B8A01DE00BC2183 /* Spartan-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spartan-Bold.ttf"; sourceTree = "<group>"; };
+		AC2AD4842B8A05CB00BC2183 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		AC2AD4872B8A063400BC2183 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		AC2AD48A2B8A086400BC2183 /* Image+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+ext.swift"; sourceTree = "<group>"; };
+		AC2AD48C2B8A452D00BC2183 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		AC2AD48E2B8A473900BC2183 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		AC2AD4902B8A6F5C00BC2183 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +79,13 @@
 				AC2AD4802B89FF2700BC2183 /* Info.plist */,
 				AC2AD3FF2B86B6D600BC2183 /* FootballProRiseApp.swift */,
 				AC2AD4012B86B6D600BC2183 /* ContentView.swift */,
+				AC2AD4902B8A6F5C00BC2183 /* GameLogic.swift */,
+				AC2AD4862B8A060200BC2183 /* UserDefaults */,
 				AC2AD4812B89FF6400BC2183 /* Screens */,
 				AC2AD4772B89376100BC2183 /* Components */,
 				AC2AD40D2B86B84100BC2183 /* Resources */,
 				AC2AD4032B86B6D900BC2183 /* Assets.xcassets */,
+				AC2AD4892B8A084900BC2183 /* Extensions */,
 				AC2AD4052B86B6D900BC2183 /* Preview Content */,
 			);
 			path = FootballProRise;
@@ -89,6 +104,7 @@
 			children = (
 				AC2AD40E2B86B84E00BC2183 /* Fonts */,
 				AC2AD40F2B86B89400BC2183 /* Text.swift */,
+				AC2AD48E2B8A473900BC2183 /* Fonts.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -115,8 +131,26 @@
 		AC2AD4812B89FF6400BC2183 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				AC2AD4842B8A05CB00BC2183 /* Splash.swift */,
+				AC2AD48C2B8A452D00BC2183 /* Welcome.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		AC2AD4862B8A060200BC2183 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				AC2AD4872B8A063400BC2183 /* UserDefaults.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		AC2AD4892B8A084900BC2183 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC2AD48A2B8A086400BC2183 /* Image+ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,9 +227,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC2AD47B2B89468700BC2183 /* CarouselLogic.swift in Sources */,
+				AC2AD4912B8A6F5C00BC2183 /* GameLogic.swift in Sources */,
+				AC2AD48D2B8A452D00BC2183 /* Welcome.swift in Sources */,
+				AC2AD48B2B8A086400BC2183 /* Image+ext.swift in Sources */,
+				AC2AD4882B8A063400BC2183 /* UserDefaults.swift in Sources */,
 				AC2AD4022B86B6D600BC2183 /* ContentView.swift in Sources */,
 				AC2AD4102B86B89400BC2183 /* Text.swift in Sources */,
+				AC2AD48F2B8A473900BC2183 /* Fonts.swift in Sources */,
 				AC2AD4792B89379100BC2183 /* CarouselView.swift in Sources */,
+				AC2AD4852B8A05CB00BC2183 /* Splash.swift in Sources */,
 				AC2AD4002B86B6D600BC2183 /* FootballProRiseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -55,3 +55,13 @@ Train your player's strength, speed, endurance, and football knowledge with exci
     Write your name in football history with Legends United, a legendary team steeped in tradition and glory. Lead your teammates to victory in the highest echelons of the sport, etching your name alongside the greatest players of all time.
 """
 }
+
+let names = ["Lucas","Marco","Diego","Gabriel","Bruno","Thiago","Pedro","Rafael","Felipe",
+"Joao", "Daniel", "Matheus", "Rodrigo", "Victor", "Guilherme", "Gustavo", "Alex", "Marcus",
+"Ryan","Jordan","Tyler","Liam","Nathan","Ethan","Mason","Brandon","Dylan","Cameron","Austin",
+"Noah","Elijah","Isaac","Samuel","Jacob","Logan","Matthew"]
+let lastnames = ["Johnson", "White", "Martinez", "Thompson", "Brown", "Rodriguez", "Garcia",
+"Williams", "Taylor", "Lee", "Clark", "Evans", "Moore", "Hernandez", "Scott", "Rivera", "Adams", "Mitchell", "Davis", "Wilson", "Rodriguez", "Santos", "Martinez", "Silva",
+"Oliveira", "Costa", "Ramos", "Pereira", "Gonzalez", "Ferreira", "Almeida", "Lima", "Souza",
+"Pereira"]
+

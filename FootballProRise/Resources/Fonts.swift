@@ -7,6 +7,8 @@ import SwiftUI
 enum CustomFont: String {
     case extraBold = "Spartan-ExtraBold"
     case bold = "Spartan-Bold"
+    case semibold = "Spartan-SemiBold"
+    case medium = "Spartan-Medium"
     case regular = "Spartan-Regular"
 }
 

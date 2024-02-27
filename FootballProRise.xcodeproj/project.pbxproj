@@ -23,6 +23,10 @@
 		AC2AD48D2B8A452D00BC2183 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD48C2B8A452D00BC2183 /* Welcome.swift */; };
 		AC2AD48F2B8A473900BC2183 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD48E2B8A473900BC2183 /* Fonts.swift */; };
 		AC2AD4912B8A6F5C00BC2183 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD4902B8A6F5C00BC2183 /* GameLogic.swift */; };
+		AC2AD4932B8A7AE300BC2183 /* Great.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD4922B8A7AE300BC2183 /* Great.swift */; };
+		AC2AD4952B8A922E00BC2183 /* Spartan-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD4942B8A922E00BC2183 /* Spartan-Medium.ttf */; };
+		AC2AD4972B8A946900BC2183 /* Spartan-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD4962B8A946900BC2183 /* Spartan-SemiBold.ttf */; };
+		AC2AD52C2B8D557900BC2183 /* CarouselView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD52B2B8D557900BC2183 /* CarouselView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		AC2AD48C2B8A452D00BC2183 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		AC2AD48E2B8A473900BC2183 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		AC2AD4902B8A6F5C00BC2183 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		AC2AD4922B8A7AE300BC2183 /* Great.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Great.swift; sourceTree = "<group>"; };
+		AC2AD4942B8A922E00BC2183 /* Spartan-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spartan-Medium.ttf"; sourceTree = "<group>"; };
+		AC2AD4962B8A946900BC2183 /* Spartan-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spartan-SemiBold.ttf"; sourceTree = "<group>"; };
+		AC2AD52B2B8D557900BC2183 /* CarouselView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 				AC2AD3FF2B86B6D600BC2183 /* FootballProRiseApp.swift */,
 				AC2AD4012B86B6D600BC2183 /* ContentView.swift */,
 				AC2AD4902B8A6F5C00BC2183 /* GameLogic.swift */,
+				AC2AD52D2B8DFFB200BC2183 /* Models */,
 				AC2AD4862B8A060200BC2183 /* UserDefaults */,
 				AC2AD4812B89FF6400BC2183 /* Screens */,
 				AC2AD4772B89376100BC2183 /* Components */,
@@ -114,6 +123,8 @@
 			children = (
 				AC2AD47C2B89FEF700BC2183 /* Spartan-ExtraBold.ttf */,
 				AC2AD4822B8A01DE00BC2183 /* Spartan-Bold.ttf */,
+				AC2AD4962B8A946900BC2183 /* Spartan-SemiBold.ttf */,
+				AC2AD4942B8A922E00BC2183 /* Spartan-Medium.ttf */,
 				AC2AD47E2B89FF0600BC2183 /* Spartan-Regular.ttf */,
 			);
 			path = Fonts;
@@ -123,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				AC2AD4782B89379100BC2183 /* CarouselView.swift */,
+				AC2AD52B2B8D557900BC2183 /* CarouselView2.swift */,
+				AC2AD4922B8A7AE300BC2183 /* Great.swift */,
 				AC2AD47A2B89468700BC2183 /* CarouselLogic.swift */,
 			);
 			path = Components;
@@ -151,6 +164,13 @@
 				AC2AD48A2B8A086400BC2183 /* Image+ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC2AD52D2B8DFFB200BC2183 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC2AD4072B86B6D900BC2183 /* Preview Assets.xcassets in Resources */,
+				AC2AD4952B8A922E00BC2183 /* Spartan-Medium.ttf in Resources */,
 				AC2AD4042B86B6D900BC2183 /* Assets.xcassets in Resources */,
+				AC2AD4972B8A946900BC2183 /* Spartan-SemiBold.ttf in Resources */,
 				AC2AD47D2B89FEF700BC2183 /* Spartan-ExtraBold.ttf in Resources */,
 				AC2AD47F2B89FF0600BC2183 /* Spartan-Regular.ttf in Resources */,
 				AC2AD4832B8A01DE00BC2183 /* Spartan-Bold.ttf in Resources */,
@@ -230,11 +252,13 @@
 				AC2AD4912B8A6F5C00BC2183 /* GameLogic.swift in Sources */,
 				AC2AD48D2B8A452D00BC2183 /* Welcome.swift in Sources */,
 				AC2AD48B2B8A086400BC2183 /* Image+ext.swift in Sources */,
+				AC2AD52C2B8D557900BC2183 /* CarouselView2.swift in Sources */,
 				AC2AD4882B8A063400BC2183 /* UserDefaults.swift in Sources */,
 				AC2AD4022B86B6D600BC2183 /* ContentView.swift in Sources */,
 				AC2AD4102B86B89400BC2183 /* Text.swift in Sources */,
 				AC2AD48F2B8A473900BC2183 /* Fonts.swift in Sources */,
 				AC2AD4792B89379100BC2183 /* CarouselView.swift in Sources */,
+				AC2AD4932B8A7AE300BC2183 /* Great.swift in Sources */,
 				AC2AD4852B8A05CB00BC2183 /* Splash.swift in Sources */,
 				AC2AD4002B86B6D600BC2183 /* FootballProRiseApp.swift in Sources */,
 			);

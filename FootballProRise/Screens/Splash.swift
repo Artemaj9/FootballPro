@@ -10,7 +10,6 @@ struct Splash: View {
             .resizableToFill()
             .scaleEffect(1.01)
             .ignoresSafeArea()
-        
     }
 }
 

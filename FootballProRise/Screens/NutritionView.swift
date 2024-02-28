@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct Nutrition: View {
+struct NutritionView: View {
     @EnvironmentObject var vm: GameLogic
     
     var body: some View {
@@ -15,7 +15,7 @@ struct Nutrition: View {
             
             
             VStack {
-                HStack(spacing: 20) {
+                HStack(alignment: .top, spacing: 20) {
                     Image("backbtn")
                         .resizableToFill()
                         .frame(width: 50, height: 50)
@@ -38,13 +38,35 @@ struct Nutrition: View {
                             }
                             .offset(y: 2)
                         }
+                        .overlay(alignment: .trailing) {
+                            Image("coin")
+                                .resizableToFit()
+                                .offset(x: 4, y: 2)
+                                .scaleEffect(1.1)
+                            
+                        }
                     EnergyLevel()
                         .environmentObject(vm)
                         .offset(y: 6)
                 }
                 .padding(.top, 60)
-                Spacer()
+                
+                ScrollView(showsIndicators: false)
+                {
+                    Color.clear
+                        .frame(height: 20)
+                    ForEach (1..<nutritions.count + 1) { index in
+                        FoodSlot(number: index)
+                    }
+                    
+                    Color.clear
+                        .frame(height: 80)
+                }
+
             }
+            
+            
+        
         }
         .ignoresSafeArea()
       
@@ -52,6 +74,6 @@ struct Nutrition: View {
 }
 
 #Preview {
-    Nutrition()
+    NutritionView()
         .environmentObject(GameLogic())
 }

@@ -27,6 +27,10 @@
 		AC2AD4952B8A922E00BC2183 /* Spartan-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD4942B8A922E00BC2183 /* Spartan-Medium.ttf */; };
 		AC2AD4972B8A946900BC2183 /* Spartan-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD4962B8A946900BC2183 /* Spartan-SemiBold.ttf */; };
 		AC2AD52C2B8D557900BC2183 /* CarouselView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD52B2B8D557900BC2183 /* CarouselView2.swift */; };
+		AC2AD52F2B8E005400BC2183 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD52E2B8E005400BC2183 /* QuestionModel.swift */; };
+		AC2AD5442B8FB1C000BC2183 /* GradAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5432B8FB1C000BC2183 /* GradAnimation.swift */; };
+		AC2AD5462B8FC71300BC2183 /* Nutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5452B8FC71300BC2183 /* Nutrition.swift */; };
+		AC2AD5482B8FCA0700BC2183 /* EnergyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5472B8FCA0700BC2183 /* EnergyLevel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		AC2AD4942B8A922E00BC2183 /* Spartan-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spartan-Medium.ttf"; sourceTree = "<group>"; };
 		AC2AD4962B8A946900BC2183 /* Spartan-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spartan-SemiBold.ttf"; sourceTree = "<group>"; };
 		AC2AD52B2B8D557900BC2183 /* CarouselView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView2.swift; sourceTree = "<group>"; };
+		AC2AD52E2B8E005400BC2183 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		AC2AD5432B8FB1C000BC2183 /* GradAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradAnimation.swift; sourceTree = "<group>"; };
+		AC2AD5452B8FC71300BC2183 /* Nutrition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition.swift; sourceTree = "<group>"; };
+		AC2AD5472B8FCA0700BC2183 /* EnergyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyLevel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,9 +141,10 @@
 		AC2AD4772B89376100BC2183 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AC2AD5432B8FB1C000BC2183 /* GradAnimation.swift */,
+				AC2AD5472B8FCA0700BC2183 /* EnergyLevel.swift */,
 				AC2AD4782B89379100BC2183 /* CarouselView.swift */,
 				AC2AD52B2B8D557900BC2183 /* CarouselView2.swift */,
-				AC2AD4922B8A7AE300BC2183 /* Great.swift */,
 				AC2AD47A2B89468700BC2183 /* CarouselLogic.swift */,
 			);
 			path = Components;
@@ -146,6 +155,8 @@
 			children = (
 				AC2AD4842B8A05CB00BC2183 /* Splash.swift */,
 				AC2AD48C2B8A452D00BC2183 /* Welcome.swift */,
+				AC2AD4922B8A7AE300BC2183 /* Great.swift */,
+				AC2AD5452B8FC71300BC2183 /* Nutrition.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -169,6 +180,7 @@
 		AC2AD52D2B8DFFB200BC2183 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AC2AD52E2B8E005400BC2183 /* QuestionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,11 +264,15 @@
 				AC2AD4912B8A6F5C00BC2183 /* GameLogic.swift in Sources */,
 				AC2AD48D2B8A452D00BC2183 /* Welcome.swift in Sources */,
 				AC2AD48B2B8A086400BC2183 /* Image+ext.swift in Sources */,
+				AC2AD5442B8FB1C000BC2183 /* GradAnimation.swift in Sources */,
 				AC2AD52C2B8D557900BC2183 /* CarouselView2.swift in Sources */,
+				AC2AD5462B8FC71300BC2183 /* Nutrition.swift in Sources */,
 				AC2AD4882B8A063400BC2183 /* UserDefaults.swift in Sources */,
 				AC2AD4022B86B6D600BC2183 /* ContentView.swift in Sources */,
+				AC2AD52F2B8E005400BC2183 /* QuestionModel.swift in Sources */,
 				AC2AD4102B86B89400BC2183 /* Text.swift in Sources */,
 				AC2AD48F2B8A473900BC2183 /* Fonts.swift in Sources */,
+				AC2AD5482B8FCA0700BC2183 /* EnergyLevel.swift in Sources */,
 				AC2AD4792B89379100BC2183 /* CarouselView.swift in Sources */,
 				AC2AD4932B8A7AE300BC2183 /* Great.swift in Sources */,
 				AC2AD4852B8A05CB00BC2183 /* Splash.swift in Sources */,

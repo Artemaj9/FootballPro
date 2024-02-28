@@ -60,6 +60,7 @@ let names = ["Lucas","Marco","Diego","Gabriel","Bruno","Thiago","Pedro","Rafael"
 "Joao", "Daniel", "Matheus", "Rodrigo", "Victor", "Guilherme", "Gustavo", "Alex", "Marcus",
 "Ryan","Jordan","Tyler","Liam","Nathan","Ethan","Mason","Brandon","Dylan","Cameron","Austin",
 "Noah","Elijah","Isaac","Samuel","Jacob","Logan","Matthew"]
+
 let lastnames = ["Johnson", "White", "Martinez", "Thompson", "Brown", "Rodriguez", "Garcia",
 "Williams", "Taylor", "Lee", "Clark", "Evans", "Moore", "Hernandez", "Scott", "Rivera", "Adams", "Mitchell", "Davis", "Wilson", "Rodriguez", "Santos", "Martinez", "Silva",
 "Oliveira", "Costa", "Ramos", "Pereira", "Gonzalez", "Ferreira", "Almeida", "Lima", "Souza",

@@ -14,6 +14,8 @@ struct Great: View {
                 .resizableToFill()
                 .ignoresSafeArea()
                 .scaleEffect(1.01)
+            GradAnimation(color: "sea")
+            
             VStack(alignment: .leading) {
                 Text( WelcomeTxt.great)
                     .foregroundStyle(Color("customWhite"))
@@ -109,6 +111,7 @@ struct Great: View {
             }
         
                 .offset(y: vm.size.height * 0.3)
+        
         }
     }
         

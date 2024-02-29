@@ -10,4 +10,5 @@ class GameLogic: ObservableObject {
     @Published var nutritionOpacity = Array(repeating: 1.0, count: 12)
     @Published var balance = 1000
     @Published var isPlusEnergy = true
+    @Published var trainingsDone = [3, 4, 0, 4]
 }

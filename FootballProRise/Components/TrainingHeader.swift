@@ -33,4 +33,5 @@ struct TrainingHeader: View {
         TrainingHeader(title: "STRENGTH")
             .environmentObject(GameLogic())
     }
+    .ignoresSafeArea()
 }

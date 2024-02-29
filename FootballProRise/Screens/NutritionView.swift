@@ -6,13 +6,12 @@ import SwiftUI
 
 struct NutritionView: View {
     @EnvironmentObject var vm: GameLogic
-    
+
     var body: some View {
         ZStack {
             Image("welcomebg")
                 .resizableToFill()
                 .scaleEffect(1.01)
-            
             
             VStack {
                 HStack(alignment: .top, spacing: 20) {
@@ -30,7 +29,7 @@ struct NutritionView: View {
                                     .font(.custom(.regular, size: 14))
                                     .shadow(color: .black.opacity(0.23), radius: 2, y: 1)
                                 
-                                Text("1500")
+                                Text(String(vm.balance))
                                     .foregroundStyle(Color("customWhite"))
                                     .font(.custom(.bold, size: 19))
                                     .padding(.trailing, 8)
@@ -43,7 +42,6 @@ struct NutritionView: View {
                                 .resizableToFit()
                                 .offset(x: 4, y: 2)
                                 .scaleEffect(1.1)
-                            
                         }
                     EnergyLevel()
                         .environmentObject(vm)
@@ -57,19 +55,26 @@ struct NutritionView: View {
                         .frame(height: 20)
                     ForEach (1..<nutritions.count + 1) { index in
                         FoodSlot(number: index)
+                            .environmentObject(vm)
                     }
-                    
                     Color.clear
                         .frame(height: 80)
                 }
-
+                .padding(.top, 4)
+                .mask {
+                    ScrollGradient()
+                }
             }
-            
-            
-        
+            if vm.isPlusEnergy {
+                EnergyPlusView()
+                    .environmentObject(vm)
+                  //  .blendMode(.difference)
+            }
+        }
+        .onAppear {
+
         }
         .ignoresSafeArea()
-      
     }
 }
 

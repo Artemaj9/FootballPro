@@ -1,8 +1,15 @@
 //
 //  Gradients.swift
-//  FootballProRise
-//
-//  Created by Artem on 29.02.2024.
 //
 
-import Foundation
+import SwiftUI
+
+let scrollGrad  = LinearGradient(
+    colors: [
+        Color.green,
+        Color.blue,
+        Color.green,
+    ],
+    startPoint: .top,
+    endPoint: .bottom
+)

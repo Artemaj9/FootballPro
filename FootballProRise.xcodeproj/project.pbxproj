@@ -33,6 +33,11 @@
 		AC2AD5482B8FCA0700BC2183 /* EnergyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5472B8FCA0700BC2183 /* EnergyLevel.swift */; };
 		AC2AD54A2B8FDCED00BC2183 /* NutritionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5492B8FDCED00BC2183 /* NutritionModel.swift */; };
 		AC2AD54C2B8FDEBC00BC2183 /* FoodSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD54B2B8FDEBC00BC2183 /* FoodSlot.swift */; };
+		AC2AD54E2B8FE42A00BC2183 /* EffectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD54D2B8FE42A00BC2183 /* EffectService.swift */; };
+		AC2AD5512B8FEEB800BC2183 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5502B8FEEB800BC2183 /* Gradients.swift */; };
+		AC2AD5542B8FEF3800BC2183 /* ScrollGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5532B8FEF3800BC2183 /* ScrollGradient.swift */; };
+		AC2AD5562B8FF79700BC2183 /* EnergyPlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5552B8FF79700BC2183 /* EnergyPlusView.swift */; };
+		AC2AD5582B8FF88300BC2183 /* MagicGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5572B8FF88300BC2183 /* MagicGradient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,11 @@
 		AC2AD5472B8FCA0700BC2183 /* EnergyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyLevel.swift; sourceTree = "<group>"; };
 		AC2AD5492B8FDCED00BC2183 /* NutritionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionModel.swift; sourceTree = "<group>"; };
 		AC2AD54B2B8FDEBC00BC2183 /* FoodSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSlot.swift; sourceTree = "<group>"; };
+		AC2AD54D2B8FE42A00BC2183 /* EffectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectService.swift; sourceTree = "<group>"; };
+		AC2AD5502B8FEEB800BC2183 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
+		AC2AD5532B8FEF3800BC2183 /* ScrollGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollGradient.swift; sourceTree = "<group>"; };
+		AC2AD5552B8FF79700BC2183 /* EnergyPlusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyPlusView.swift; sourceTree = "<group>"; };
+		AC2AD5572B8FF88300BC2183 /* MagicGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicGradient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,7 @@
 				AC2AD3FF2B86B6D600BC2183 /* FootballProRiseApp.swift */,
 				AC2AD4012B86B6D600BC2183 /* ContentView.swift */,
 				AC2AD4902B8A6F5C00BC2183 /* GameLogic.swift */,
+				AC2AD54F2B8FE44100BC2183 /* Services */,
 				AC2AD52D2B8DFFB200BC2183 /* Models */,
 				AC2AD4862B8A060200BC2183 /* UserDefaults */,
 				AC2AD4812B89FF6400BC2183 /* Screens */,
@@ -125,6 +136,7 @@
 			children = (
 				AC2AD40E2B86B84E00BC2183 /* Fonts */,
 				AC2AD40F2B86B89400BC2183 /* Text.swift */,
+				AC2AD5502B8FEEB800BC2183 /* Gradients.swift */,
 				AC2AD48E2B8A473900BC2183 /* Fonts.swift */,
 			);
 			path = Resources;
@@ -146,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				AC2AD5432B8FB1C000BC2183 /* GradAnimation.swift */,
+				AC2AD5532B8FEF3800BC2183 /* ScrollGradient.swift */,
+				AC2AD5572B8FF88300BC2183 /* MagicGradient.swift */,
 				AC2AD5472B8FCA0700BC2183 /* EnergyLevel.swift */,
 				AC2AD54B2B8FDEBC00BC2183 /* FoodSlot.swift */,
 				AC2AD4782B89379100BC2183 /* CarouselView.swift */,
@@ -162,6 +176,7 @@
 				AC2AD48C2B8A452D00BC2183 /* Welcome.swift */,
 				AC2AD4922B8A7AE300BC2183 /* Great.swift */,
 				AC2AD5452B8FC71300BC2183 /* NutritionView.swift */,
+				AC2AD5552B8FF79700BC2183 /* EnergyPlusView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -189,6 +204,14 @@
 				AC2AD5492B8FDCED00BC2183 /* NutritionModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AC2AD54F2B8FE44100BC2183 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AC2AD54D2B8FE42A00BC2183 /* EffectService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,8 +292,12 @@
 				AC2AD47B2B89468700BC2183 /* CarouselLogic.swift in Sources */,
 				AC2AD4912B8A6F5C00BC2183 /* GameLogic.swift in Sources */,
 				AC2AD48D2B8A452D00BC2183 /* Welcome.swift in Sources */,
+				AC2AD5562B8FF79700BC2183 /* EnergyPlusView.swift in Sources */,
 				AC2AD48B2B8A086400BC2183 /* Image+ext.swift in Sources */,
+				AC2AD5582B8FF88300BC2183 /* MagicGradient.swift in Sources */,
 				AC2AD5442B8FB1C000BC2183 /* GradAnimation.swift in Sources */,
+				AC2AD5512B8FEEB800BC2183 /* Gradients.swift in Sources */,
+				AC2AD5542B8FEF3800BC2183 /* ScrollGradient.swift in Sources */,
 				AC2AD52C2B8D557900BC2183 /* CarouselView2.swift in Sources */,
 				AC2AD5462B8FC71300BC2183 /* NutritionView.swift in Sources */,
 				AC2AD4882B8A063400BC2183 /* UserDefaults.swift in Sources */,
@@ -282,6 +309,7 @@
 				AC2AD4792B89379100BC2183 /* CarouselView.swift in Sources */,
 				AC2AD54C2B8FDEBC00BC2183 /* FoodSlot.swift in Sources */,
 				AC2AD54A2B8FDCED00BC2183 /* NutritionModel.swift in Sources */,
+				AC2AD54E2B8FE42A00BC2183 /* EffectService.swift in Sources */,
 				AC2AD4932B8A7AE300BC2183 /* Great.swift in Sources */,
 				AC2AD4852B8A05CB00BC2183 /* Splash.swift in Sources */,
 				AC2AD4002B86B6D600BC2183 /* FootballProRiseApp.swift in Sources */,

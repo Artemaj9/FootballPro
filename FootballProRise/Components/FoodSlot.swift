@@ -6,26 +6,36 @@ import SwiftUI
 
 struct FoodSlot: View {
     let number: Int
+    @EnvironmentObject var vm: GameLogic
     
     var body: some View {
         VStack(spacing: 4) {
             Image("food\(number)")
                 .resizableToFit()
-            Image("greenbtn")
-                .resizableToFit()
-                .overlay {
-                    HStack {
-                        Text("Get for ")
-                            .font(.custom(.regular, size: 18))
-                        +
-                        Text("\(nutritions[number-1].price)")
-                            .font(.custom(.extraBold, size: 18))
-                        
-                        Image("coin")
-                            .resizableToFit()
-                    }
-                    .foregroundStyle(Color("customWhite"))
+            Button {
+                if vm.balance >= nutritions[number-1].price {
+                    vm.balance -= nutritions[number-1].price
+                    vm.energyLevel += nutritions[number-1].energy
+                    
                 }
+                    
+            } label: {
+                Image("greenbtn")
+                    .resizableToFit()
+                    .overlay {
+                        HStack {
+                            Text("Get for ")
+                                .font(.custom(.regular, size: 18))
+                            +
+                            Text("\(nutritions[number-1].price)")
+                                .font(.custom(.extraBold, size: 18))
+                            
+                            Image("coin")
+                                .resizableToFit()
+                        }
+                        .foregroundStyle(Color("customWhite"))
+                    }
+            }
         }
         .padding(.horizontal, 20)
     }
@@ -33,4 +43,5 @@ struct FoodSlot: View {
 
 #Preview {
     FoodSlot(number: 1)
+        .environmentObject(GameLogic())
 }

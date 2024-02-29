@@ -24,8 +24,7 @@ struct Welcome: View {
             }
             .padding()
             .offset(y: -vm.size.height * 0.25)
-            
-            
+        
             Button {
                 
             } label: {

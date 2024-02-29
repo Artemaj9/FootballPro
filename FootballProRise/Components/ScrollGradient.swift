@@ -7,9 +7,17 @@
 
 import SwiftUI
 
+
+
 struct ScrollGradient: View {
+    let stops = [Gradient.Stop(color: Color.green.opacity(0), location: 0.01),
+                 Gradient.Stop(color: .green, location: 0.05),
+                // Gradient.Stop(color: Color.blue, location: 0.66),
+                 Gradient.Stop(color: .green, location: 0.95),
+                 Gradient.Stop(color: Color.red.opacity(0), location: 1)]
+                 //Gradient.Stop(color: Color.red, location: 1.0)]]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LinearGradient(stops: stops, startPoint: .top, endPoint: .bottom)
     }
 }
 

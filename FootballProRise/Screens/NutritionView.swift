@@ -68,7 +68,6 @@ struct NutritionView: View {
             if vm.isPlusEnergy {
                 EnergyPlusView()
                     .environmentObject(vm)
-                  //  .blendMode(.difference)
             }
         }
         .onAppear {

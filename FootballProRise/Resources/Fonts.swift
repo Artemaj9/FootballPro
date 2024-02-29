@@ -10,6 +10,7 @@ enum CustomFont: String {
     case semibold = "Spartan-SemiBold"
     case medium = "Spartan-Medium"
     case regular = "Spartan-Regular"
+    case black = "Spartan-Black"
 }
 
 extension Font {

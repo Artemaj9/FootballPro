@@ -38,6 +38,8 @@
 		AC2AD5542B8FEF3800BC2183 /* ScrollGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5532B8FEF3800BC2183 /* ScrollGradient.swift */; };
 		AC2AD5562B8FF79700BC2183 /* EnergyPlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5552B8FF79700BC2183 /* EnergyPlusView.swift */; };
 		AC2AD5582B8FF88300BC2183 /* MagicGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5572B8FF88300BC2183 /* MagicGradient.swift */; };
+		AC2AD55A2B90041100BC2183 /* TrainingHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5592B90041100BC2183 /* TrainingHeader.swift */; };
+		AC2AD55C2B9004C000BC2183 /* Spartan-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD55B2B9004BF00BC2183 /* Spartan-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		AC2AD5532B8FEF3800BC2183 /* ScrollGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollGradient.swift; sourceTree = "<group>"; };
 		AC2AD5552B8FF79700BC2183 /* EnergyPlusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyPlusView.swift; sourceTree = "<group>"; };
 		AC2AD5572B8FF88300BC2183 /* MagicGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicGradient.swift; sourceTree = "<group>"; };
+		AC2AD5592B90041100BC2183 /* TrainingHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHeader.swift; sourceTree = "<group>"; };
+		AC2AD55B2B9004BF00BC2183 /* Spartan-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spartan-Black.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				AC2AD47C2B89FEF700BC2183 /* Spartan-ExtraBold.ttf */,
+				AC2AD55B2B9004BF00BC2183 /* Spartan-Black.ttf */,
 				AC2AD4822B8A01DE00BC2183 /* Spartan-Bold.ttf */,
 				AC2AD4962B8A946900BC2183 /* Spartan-SemiBold.ttf */,
 				AC2AD4942B8A922E00BC2183 /* Spartan-Medium.ttf */,
@@ -158,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				AC2AD5432B8FB1C000BC2183 /* GradAnimation.swift */,
+				AC2AD5592B90041100BC2183 /* TrainingHeader.swift */,
 				AC2AD5532B8FEF3800BC2183 /* ScrollGradient.swift */,
 				AC2AD5572B8FF88300BC2183 /* MagicGradient.swift */,
 				AC2AD5472B8FCA0700BC2183 /* EnergyLevel.swift */,
@@ -272,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2AD55C2B9004C000BC2183 /* Spartan-Black.ttf in Resources */,
 				AC2AD4072B86B6D900BC2183 /* Preview Assets.xcassets in Resources */,
 				AC2AD4952B8A922E00BC2183 /* Spartan-Medium.ttf in Resources */,
 				AC2AD4042B86B6D900BC2183 /* Assets.xcassets in Resources */,
@@ -309,6 +316,7 @@
 				AC2AD4792B89379100BC2183 /* CarouselView.swift in Sources */,
 				AC2AD54C2B8FDEBC00BC2183 /* FoodSlot.swift in Sources */,
 				AC2AD54A2B8FDCED00BC2183 /* NutritionModel.swift in Sources */,
+				AC2AD55A2B90041100BC2183 /* TrainingHeader.swift in Sources */,
 				AC2AD54E2B8FE42A00BC2183 /* EffectService.swift in Sources */,
 				AC2AD4932B8A7AE300BC2183 /* Great.swift in Sources */,
 				AC2AD4852B8A05CB00BC2183 /* Splash.swift in Sources */,

@@ -62,8 +62,9 @@ struct CongratulationsView: View {
                 } label: {
                     Text("Tap to continue")
                         .font(.custom(.extraBold, size: 23))
-                        .opacity(0.5)
+                        .opacity(opacity)
                         .padding(20)
+                    
                 }
                 .offset(y: -8)
                 
@@ -100,6 +101,10 @@ struct CongratulationsView: View {
             withAnimation(.easeInOut(duration: 3).delay(1.5)) {
                     saturation = 1
                 grayScale = 0
+            }
+            
+            withAnimation(.easeInOut(duration: 1).delay(2)) {
+                opacity = 0.5
             }
         }
     }

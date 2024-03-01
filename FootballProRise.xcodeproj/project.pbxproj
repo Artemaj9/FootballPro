@@ -46,6 +46,8 @@
 		AC2AD5BC2B912D2D00BC2183 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5BB2B912D2D00BC2183 /* Background.swift */; };
 		AC2AD5BE2B91DD8500BC2183 /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5BD2B91DD8500BC2183 /* CheckView.swift */; };
 		AC2AD5C02B91EBF200BC2183 /* TrainOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5BF2B91EBF200BC2183 /* TrainOverView.swift */; };
+		AC2AD5C22B92069500BC2183 /* TournamentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5C12B92069500BC2183 /* TournamentView.swift */; };
+		AC2AD5C42B92397000BC2183 /* TournamentGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5C32B92396F00BC2183 /* TournamentGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		AC2AD5BB2B912D2D00BC2183 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		AC2AD5BD2B91DD8500BC2183 /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
 		AC2AD5BF2B91EBF200BC2183 /* TrainOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainOverView.swift; sourceTree = "<group>"; };
+		AC2AD5C12B92069500BC2183 /* TournamentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentView.swift; sourceTree = "<group>"; };
+		AC2AD5C32B92396F00BC2183 /* TournamentGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,8 @@
 				AC2AD5B92B912A6E00BC2183 /* TrainQuestionsView.swift */,
 				AC2AD5BD2B91DD8500BC2183 /* CheckView.swift */,
 				AC2AD5BF2B91EBF200BC2183 /* TrainOverView.swift */,
+				AC2AD5C12B92069500BC2183 /* TournamentView.swift */,
+				AC2AD5C32B92396F00BC2183 /* TournamentGameView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -323,6 +329,7 @@
 				AC2AD5582B8FF88300BC2183 /* MagicGradient.swift in Sources */,
 				AC2AD5442B8FB1C000BC2183 /* GradAnimation.swift in Sources */,
 				AC2AD5512B8FEEB800BC2183 /* Gradients.swift in Sources */,
+				AC2AD5C42B92397000BC2183 /* TournamentGameView.swift in Sources */,
 				AC2AD5C02B91EBF200BC2183 /* TrainOverView.swift in Sources */,
 				AC2AD5542B8FEF3800BC2183 /* ScrollGradient.swift in Sources */,
 				AC2AD52C2B8D557900BC2183 /* CarouselView2.swift in Sources */,
@@ -337,6 +344,7 @@
 				AC2AD5482B8FCA0700BC2183 /* EnergyLevel.swift in Sources */,
 				AC2AD5BC2B912D2D00BC2183 /* Background.swift in Sources */,
 				AC2AD4792B89379100BC2183 /* CarouselView.swift in Sources */,
+				AC2AD5C22B92069500BC2183 /* TournamentView.swift in Sources */,
 				AC2AD54C2B8FDEBC00BC2183 /* FoodSlot.swift in Sources */,
 				AC2AD54A2B8FDCED00BC2183 /* NutritionModel.swift in Sources */,
 				AC2AD55A2B90041100BC2183 /* TrainingHeader.swift in Sources */,

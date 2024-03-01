@@ -14,6 +14,12 @@ class GameLogic: ObservableObject {
     @Published var selectedAnswer = 0
     
     
+    // training
+    
+    @Published var totalEnergyLose = 10
+    @Published var totalMonewWin = 150
+    @Published var trainScore = 4
+    
     
     // check view
     @Published var checkView = false
@@ -24,5 +30,11 @@ class GameLogic: ObservableObject {
     @Published var isToutnament = true
     @Published var league = 3
     @Published var opponent = 4
+    
+    // tournament
+    
+    @Published var score = 3
+    @Published var oppponentScore = 2
+    @Published var currentQuestion = 1
     
 }

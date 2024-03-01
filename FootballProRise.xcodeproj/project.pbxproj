@@ -48,6 +48,8 @@
 		AC2AD5C02B91EBF200BC2183 /* TrainOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5BF2B91EBF200BC2183 /* TrainOverView.swift */; };
 		AC2AD5C22B92069500BC2183 /* TournamentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5C12B92069500BC2183 /* TournamentView.swift */; };
 		AC2AD5C42B92397000BC2183 /* TournamentGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5C32B92396F00BC2183 /* TournamentGameView.swift */; };
+		AC2AD5C62B926FBE00BC2183 /* TournamentEndGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5C52B926FBE00BC2183 /* TournamentEndGame.swift */; };
+		AC2AD5C82B928F2E00BC2183 /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5C72B928F2E00BC2183 /* CongratulationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		AC2AD5BF2B91EBF200BC2183 /* TrainOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainOverView.swift; sourceTree = "<group>"; };
 		AC2AD5C12B92069500BC2183 /* TournamentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentView.swift; sourceTree = "<group>"; };
 		AC2AD5C32B92396F00BC2183 /* TournamentGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentGameView.swift; sourceTree = "<group>"; };
+		AC2AD5C52B926FBE00BC2183 /* TournamentEndGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentEndGame.swift; sourceTree = "<group>"; };
+		AC2AD5C72B928F2E00BC2183 /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,8 @@
 				AC2AD5BF2B91EBF200BC2183 /* TrainOverView.swift */,
 				AC2AD5C12B92069500BC2183 /* TournamentView.swift */,
 				AC2AD5C32B92396F00BC2183 /* TournamentGameView.swift */,
+				AC2AD5C52B926FBE00BC2183 /* TournamentEndGame.swift */,
+				AC2AD5C72B928F2E00BC2183 /* CongratulationsView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 				AC2AD48D2B8A452D00BC2183 /* Welcome.swift in Sources */,
 				AC2AD5562B8FF79700BC2183 /* EnergyPlusView.swift in Sources */,
 				AC2AD48B2B8A086400BC2183 /* Image+ext.swift in Sources */,
+				AC2AD5C82B928F2E00BC2183 /* CongratulationsView.swift in Sources */,
 				AC2AD55E2B9006EF00BC2183 /* AnimationBurst.swift in Sources */,
 				AC2AD5582B8FF88300BC2183 /* MagicGradient.swift in Sources */,
 				AC2AD5442B8FB1C000BC2183 /* GradAnimation.swift in Sources */,
@@ -340,6 +347,7 @@
 				AC2AD5BA2B912A6E00BC2183 /* TrainQuestionsView.swift in Sources */,
 				AC2AD5B82B911CDC00BC2183 /* TrainingsView.swift in Sources */,
 				AC2AD4102B86B89400BC2183 /* Text.swift in Sources */,
+				AC2AD5C62B926FBE00BC2183 /* TournamentEndGame.swift in Sources */,
 				AC2AD48F2B8A473900BC2183 /* Fonts.swift in Sources */,
 				AC2AD5482B8FCA0700BC2183 /* EnergyLevel.swift in Sources */,
 				AC2AD5BC2B912D2D00BC2183 /* Background.swift in Sources */,

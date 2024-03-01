@@ -36,5 +36,6 @@ class GameLogic: ObservableObject {
     @Published var score = 3
     @Published var oppponentScore = 2
     @Published var currentQuestion = 1
+    @Published var isWin = true
     
 }

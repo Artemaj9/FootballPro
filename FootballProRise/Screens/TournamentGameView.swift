@@ -31,6 +31,7 @@ struct TournamentGameView: View {
                         .font(.custom(.bold, size: 24))
                         .foregroundStyle(Color("customWhite"))
                         .shadow(color: .black.opacity(0.23), radius: 3, y: 3)
+                    
                     Image("scorebg")
                         .resizableToFit()
                         .frame(width: 45)
@@ -40,6 +41,7 @@ struct TournamentGameView: View {
                                 .foregroundStyle(Color("customWhite"))
                                 .shadow(color: .black.opacity(0.23), radius: 3, y: 3)
                         }
+                    
                     Image("op\(vm.opponent)")
                         .resizableToFit()
                         .frame(width: 60)

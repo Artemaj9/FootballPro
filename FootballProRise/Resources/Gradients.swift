@@ -22,3 +22,12 @@ let txtGrad = LinearGradient(
     startPoint: .top,
     endPoint: .bottom
 )
+
+let grayGrad = LinearGradient(
+    colors: [
+        Color("graygrad"),
+        Color("graygradbright")
+    ],
+    startPoint: .top,
+    endPoint: .bottom
+)

@@ -13,3 +13,12 @@ let scrollGrad  = LinearGradient(
     startPoint: .top,
     endPoint: .bottom
 )
+
+let txtGrad = LinearGradient(
+    colors: [
+        Color("gradlight"),
+        Color("gradbright")
+    ],
+    startPoint: .top,
+    endPoint: .bottom
+)

@@ -189,7 +189,9 @@ struct TrainQuestionsView: View {
                 .offset(y: vm.size.height * 0.05)
                 
                 Button {
-                   
+                    withAnimation {
+                        vm.checkView = true
+                    }
                 } label: {
                     Image("readybtn")
                         .resizableToFit()
@@ -202,6 +204,11 @@ struct TrainQuestionsView: View {
             }
             .padding(.horizontal, 8)
             .offset(y: vm.size.height * 0.1)
+            
+            if vm.checkView {
+                CheckView()
+                    .environmentObject(vm)
+            }
             
         }
         .ignoresSafeArea()

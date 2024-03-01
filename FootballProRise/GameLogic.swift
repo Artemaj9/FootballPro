@@ -12,4 +12,17 @@ class GameLogic: ObservableObject {
     @Published var isPlusEnergy = true
     @Published var trainingsDone = [3, 4, 0, 4]
     @Published var selectedAnswer = 0
+    
+    
+    
+    // check view
+    @Published var checkView = false
+    @Published var isRigthAnswer = false
+    
+    //tournament check
+    
+    @Published var isToutnament = true
+    @Published var league = 3
+    @Published var opponent = 4
+    
 }

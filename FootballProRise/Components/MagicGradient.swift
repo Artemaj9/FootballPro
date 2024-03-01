@@ -10,10 +10,14 @@ import SwiftUI
 struct MagicGradient: View {
     @State var radius: Double = 120
     @State var time: Double = 0
+    @State var scale: Double = 0
     var body: some View {
         RadialGradient(gradient: Gradient(colors: [Color("magiccolor"), Color.white.opacity(0)]), center: .center, startRadius: 10, endRadius: radius)
             .blur(radius: 20)
+            .scaleEffect(scale)
+            .animation(.spring(duration: 1), value: scale)
             .onAppear {
+                scale = 1
                 Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
                     withAnimation {
                         self.time += 0.1

@@ -44,6 +44,8 @@
 		AC2AD5B82B911CDC00BC2183 /* TrainingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5B72B911CDC00BC2183 /* TrainingsView.swift */; };
 		AC2AD5BA2B912A6E00BC2183 /* TrainQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5B92B912A6E00BC2183 /* TrainQuestionsView.swift */; };
 		AC2AD5BC2B912D2D00BC2183 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5BB2B912D2D00BC2183 /* Background.swift */; };
+		AC2AD5BE2B91DD8500BC2183 /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5BD2B91DD8500BC2183 /* CheckView.swift */; };
+		AC2AD5C02B91EBF200BC2183 /* TrainOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5BF2B91EBF200BC2183 /* TrainOverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		AC2AD5B72B911CDC00BC2183 /* TrainingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsView.swift; sourceTree = "<group>"; };
 		AC2AD5B92B912A6E00BC2183 /* TrainQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainQuestionsView.swift; sourceTree = "<group>"; };
 		AC2AD5BB2B912D2D00BC2183 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		AC2AD5BD2B91DD8500BC2183 /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
+		AC2AD5BF2B91EBF200BC2183 /* TrainOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainOverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,8 @@
 				AC2AD5552B8FF79700BC2183 /* EnergyPlusView.swift */,
 				AC2AD5B72B911CDC00BC2183 /* TrainingsView.swift */,
 				AC2AD5B92B912A6E00BC2183 /* TrainQuestionsView.swift */,
+				AC2AD5BD2B91DD8500BC2183 /* CheckView.swift */,
+				AC2AD5BF2B91EBF200BC2183 /* TrainOverView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 				AC2AD5582B8FF88300BC2183 /* MagicGradient.swift in Sources */,
 				AC2AD5442B8FB1C000BC2183 /* GradAnimation.swift in Sources */,
 				AC2AD5512B8FEEB800BC2183 /* Gradients.swift in Sources */,
+				AC2AD5C02B91EBF200BC2183 /* TrainOverView.swift in Sources */,
 				AC2AD5542B8FEF3800BC2183 /* ScrollGradient.swift in Sources */,
 				AC2AD52C2B8D557900BC2183 /* CarouselView2.swift in Sources */,
 				AC2AD5462B8FC71300BC2183 /* NutritionView.swift in Sources */,
@@ -337,6 +344,7 @@
 				AC2AD4932B8A7AE300BC2183 /* Great.swift in Sources */,
 				AC2AD4852B8A05CB00BC2183 /* Splash.swift in Sources */,
 				AC2AD4002B86B6D600BC2183 /* FootballProRiseApp.swift in Sources */,
+				AC2AD5BE2B91DD8500BC2183 /* CheckView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,5 @@
 //
 //  TrainingsView.swift
-//  FootballProRise
-//
-//  Created by Artem on 29.02.2024.
 //
 
 import SwiftUI
@@ -15,6 +12,8 @@ struct TrainingsView: View {
             Image("welcomebg")
                 .resizableToFill()
                 .scaleEffect(1.01)
+            GradAnimation(color: "sea")
+            
             VStack {
                 TrainingHeader(title: "TRAININGS")
                     .environmentObject(GameLogic())
@@ -23,7 +22,7 @@ struct TrainingsView: View {
                 HStack {
                     Image("strengthtrain")
                         .resizableToFit()
-                        .frame(width: vm.size.width * 0.4)
+                        .frame(width: vm.size.width * 0.43)
                         .overlay(alignment: .bottom) {
                             VStack(spacing: 4) {
                                 HStack {
@@ -51,7 +50,7 @@ struct TrainingsView: View {
                     
                     Image("endurancetrain")
                         .resizableToFit()
-                        .frame(width: vm.size.width * 0.4)
+                        .frame(width: vm.size.width * 0.43)
                         .overlay(alignment: .bottom) {
                             VStack(spacing: 4) {
                                 HStack {
@@ -83,7 +82,7 @@ struct TrainingsView: View {
                 HStack {
                     Image("speedtrain")
                         .resizableToFit()
-                        .frame(width: vm.size.width * 0.4)
+                        .frame(width: vm.size.width * 0.43)
                         .overlay(alignment: .bottom) {
                             VStack(spacing: 4) {
                                 HStack {
@@ -111,7 +110,7 @@ struct TrainingsView: View {
                     
                     Image("knowledgetrain")
                         .resizableToFit()
-                        .frame(width: vm.size.width * 0.4)
+                        .frame(width: vm.size.width * 0.43)
                         .overlay(alignment: .bottom) {
                             VStack(spacing: 4) {
                                 HStack {

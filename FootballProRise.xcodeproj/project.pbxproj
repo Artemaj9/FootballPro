@@ -42,6 +42,8 @@
 		AC2AD55C2B9004C000BC2183 /* Spartan-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC2AD55B2B9004BF00BC2183 /* Spartan-Black.ttf */; };
 		AC2AD55E2B9006EF00BC2183 /* AnimationBurst.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD55D2B9006EF00BC2183 /* AnimationBurst.swift */; };
 		AC2AD5B82B911CDC00BC2183 /* TrainingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5B72B911CDC00BC2183 /* TrainingsView.swift */; };
+		AC2AD5BA2B912A6E00BC2183 /* TrainQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5B92B912A6E00BC2183 /* TrainQuestionsView.swift */; };
+		AC2AD5BC2B912D2D00BC2183 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5BB2B912D2D00BC2183 /* Background.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		AC2AD55B2B9004BF00BC2183 /* Spartan-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spartan-Black.ttf"; sourceTree = "<group>"; };
 		AC2AD55D2B9006EF00BC2183 /* AnimationBurst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBurst.swift; sourceTree = "<group>"; };
 		AC2AD5B72B911CDC00BC2183 /* TrainingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsView.swift; sourceTree = "<group>"; };
+		AC2AD5B92B912A6E00BC2183 /* TrainQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainQuestionsView.swift; sourceTree = "<group>"; };
+		AC2AD5BB2B912D2D00BC2183 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 				AC2AD5472B8FCA0700BC2183 /* EnergyLevel.swift */,
 				AC2AD54B2B8FDEBC00BC2183 /* FoodSlot.swift */,
 				AC2AD55D2B9006EF00BC2183 /* AnimationBurst.swift */,
+				AC2AD5BB2B912D2D00BC2183 /* Background.swift */,
 				AC2AD4782B89379100BC2183 /* CarouselView.swift */,
 				AC2AD52B2B8D557900BC2183 /* CarouselView2.swift */,
 				AC2AD47A2B89468700BC2183 /* CarouselLogic.swift */,
@@ -189,6 +194,7 @@
 				AC2AD5452B8FC71300BC2183 /* NutritionView.swift */,
 				AC2AD5552B8FF79700BC2183 /* EnergyPlusView.swift */,
 				AC2AD5B72B911CDC00BC2183 /* TrainingsView.swift */,
+				AC2AD5B92B912A6E00BC2183 /* TrainQuestionsView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -317,10 +323,12 @@
 				AC2AD4882B8A063400BC2183 /* UserDefaults.swift in Sources */,
 				AC2AD4022B86B6D600BC2183 /* ContentView.swift in Sources */,
 				AC2AD52F2B8E005400BC2183 /* QuestionModel.swift in Sources */,
+				AC2AD5BA2B912A6E00BC2183 /* TrainQuestionsView.swift in Sources */,
 				AC2AD5B82B911CDC00BC2183 /* TrainingsView.swift in Sources */,
 				AC2AD4102B86B89400BC2183 /* Text.swift in Sources */,
 				AC2AD48F2B8A473900BC2183 /* Fonts.swift in Sources */,
 				AC2AD5482B8FCA0700BC2183 /* EnergyLevel.swift in Sources */,
+				AC2AD5BC2B912D2D00BC2183 /* Background.swift in Sources */,
 				AC2AD4792B89379100BC2183 /* CarouselView.swift in Sources */,
 				AC2AD54C2B8FDEBC00BC2183 /* FoodSlot.swift in Sources */,
 				AC2AD54A2B8FDCED00BC2183 /* NutritionModel.swift in Sources */,

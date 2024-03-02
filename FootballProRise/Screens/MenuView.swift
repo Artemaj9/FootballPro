@@ -151,7 +151,8 @@ struct MenuView: View {
                         }
                         .overlay(alignment:.bottom) {
                             NavigationLink {
-                                
+                                TournamentView()
+                                    .environmentObject(vm)
                             } label: {
                                 Image("startbtn")
                                     .resizableToFit()

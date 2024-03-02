@@ -143,6 +143,7 @@ struct TrainingsView: View {
         }
         .ignoresSafeArea()
         .preferredColorScheme(.dark)
+        .navigationBarHidden(true)
     }
 }
 

@@ -6,7 +6,7 @@ import SwiftUI
 
 struct NutritionView: View {
     @EnvironmentObject var vm: GameLogic
-
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         ZStack {
             Image("welcomebg")
@@ -15,10 +15,14 @@ struct NutritionView: View {
             
             VStack {
                 HStack(alignment: .top, spacing: 20) {
-                    Image("backbtn")
-                        .resizableToFill()
-                        .frame(width: 50, height: 50)
-                    
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image("backbtn")
+                            .resizableToFill()
+                            .frame(width: 50, height: 50)
+                    }
+                 
                     Image("balancebg")
                         .resizableToFit()
                         .frame(height: 40)
@@ -70,9 +74,8 @@ struct NutritionView: View {
                     .environmentObject(vm)
             }
         }
-        .onAppear {
-
-        }
+        .navigationBarHidden(true)
+        .preferredColorScheme(.dark)
         .ignoresSafeArea()
     }
 }

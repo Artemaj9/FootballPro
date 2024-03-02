@@ -7,17 +7,21 @@ import SwiftUI
 struct InfoView: View {
     @EnvironmentObject var vm: GameLogic
     @State private var isOpen = false
-    @State private var saturation: Double = 0
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         ZStack {
             Background(image: "welcomebg")
-               // .saturation(saturation)
                 .overlay(alignment: .topTrailing) {
-                    Image("exit")
-                        .resizableToFit()
-                        .frame(width: 36, height: 36)
-                        .padding(.horizontal, 30)
-                        .padding(.top)
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image("exit")
+                            .resizableToFit()
+                            .frame(width: 36, height: 36)
+                            .padding(.horizontal, 30)
+                            .padding(.top)
+                    }
                 }
               
             VStack {
@@ -101,11 +105,8 @@ struct InfoView: View {
                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.53), radius: 2, y: 2)
             
         }
-        .onAppear {
-            withAnimation {
-                saturation = 1
-            }
-        }
+        .navigationBarHidden(true)
+        .preferredColorScheme(.dark)
     }
 }
 

@@ -9,7 +9,7 @@ class GameLogic: ObservableObject {
  
     @Published var nutritionOpacity = Array(repeating: 1.0, count: 12)
 
-    @Published var isPlusEnergy = true
+    @Published var isPlusEnergy = false
     @Published var trainingsDone = [3, 4, 0, 4]
     @Published var selectedAnswer = 0
     

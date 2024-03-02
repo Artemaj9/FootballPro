@@ -51,6 +51,7 @@
 		AC2AD5C62B926FBE00BC2183 /* TournamentEndGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5C52B926FBE00BC2183 /* TournamentEndGame.swift */; };
 		AC2AD5C82B928F2E00BC2183 /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5C72B928F2E00BC2183 /* CongratulationsView.swift */; };
 		AC3D8B942B93B18900AFF0B0 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8B932B93B18900AFF0B0 /* InfoView.swift */; };
+		AC3D8B972B93CB0300AFF0B0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8B962B93CB0300AFF0B0 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		AC2AD5C52B926FBE00BC2183 /* TournamentEndGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentEndGame.swift; sourceTree = "<group>"; };
 		AC2AD5C72B928F2E00BC2183 /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 		AC3D8B932B93B18900AFF0B0 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		AC3D8B962B93CB0300AFF0B0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				AC2AD4842B8A05CB00BC2183 /* Splash.swift */,
 				AC2AD48C2B8A452D00BC2183 /* Welcome.swift */,
 				AC2AD4922B8A7AE300BC2183 /* Great.swift */,
+				AC3D8B962B93CB0300AFF0B0 /* MenuView.swift */,
 				AC3D8B932B93B18900AFF0B0 /* InfoView.swift */,
 				AC2AD5452B8FC71300BC2183 /* NutritionView.swift */,
 				AC2AD5552B8FF79700BC2183 /* EnergyPlusView.swift */,
@@ -342,6 +345,7 @@
 				AC2AD48D2B8A452D00BC2183 /* Welcome.swift in Sources */,
 				AC2AD5562B8FF79700BC2183 /* EnergyPlusView.swift in Sources */,
 				AC2AD48B2B8A086400BC2183 /* Image+ext.swift in Sources */,
+				AC3D8B972B93CB0300AFF0B0 /* MenuView.swift in Sources */,
 				AC2AD5C82B928F2E00BC2183 /* CongratulationsView.swift in Sources */,
 				AC2AD55E2B9006EF00BC2183 /* AnimationBurst.swift in Sources */,
 				AC2AD5582B8FF88300BC2183 /* MagicGradient.swift in Sources */,

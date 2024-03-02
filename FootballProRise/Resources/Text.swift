@@ -41,3 +41,4 @@ let lastnames = ["Johnson", "White", "Martinez", "Thompson", "Brown", "Rodriguez
 "Oliveira", "Costa", "Ramos", "Pereira", "Gonzalez", "Ferreira", "Almeida", "Lima", "Souza",
 "Pereira"]
 
+let legueName = ["Horizon Heroes"]

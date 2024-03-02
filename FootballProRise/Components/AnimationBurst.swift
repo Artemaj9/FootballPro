@@ -13,8 +13,8 @@ struct AnimationBurst: View {
     
     var body: some View {
         ZStack {
-            Color("sea")
-                .ignoresSafeArea()
+        //    Color("sea")
+          //      .ignoresSafeArea()
             RadialGradient(gradient: Gradient(colors: [Color.indigo, Color.white.opacity(0)]), center: .center, startRadius: 60, endRadius: radius)
                 .hueRotation(Angle(radians: 70 * 3.14 * 0.03 * time))
             // .blur(radius: 20)
@@ -25,8 +25,8 @@ struct AnimationBurst: View {
                 .ignoresSafeArea()
             
             
-            RadialGradient(gradient: Gradient(colors: [Color.indigo, Color.white.opacity(0)]), center: .center, startRadius: 60, endRadius: radius)
-                .hueRotation(Angle(radians: -10 * 3.14 * 0.03 * time))
+          //  RadialGradient(gradient: Gradient(colors: [Color.indigo, Color.white.opacity(0)]), center: .center, startRadius: 60, endRadius: radius)
+           //     .hueRotation(Angle(radians: -10 * 3.14 * 0.03 * time))
             // .blur(radius: 20)
             // .blendMode(.lighten)
             // .offset(x: 50*sin(2 * 3.14 * 0.03 * time))
@@ -38,6 +38,7 @@ struct AnimationBurst: View {
                 .ignoresSafeArea()
                 .grayscale(abs(1*cos(2 * 3.14 * 0.05 * time * 54)))
         }
+        .blur(radius: 80)
         .onAppear {
             Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
                 withAnimation {

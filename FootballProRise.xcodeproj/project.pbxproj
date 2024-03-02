@@ -50,6 +50,7 @@
 		AC2AD5C42B92397000BC2183 /* TournamentGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5C32B92396F00BC2183 /* TournamentGameView.swift */; };
 		AC2AD5C62B926FBE00BC2183 /* TournamentEndGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5C52B926FBE00BC2183 /* TournamentEndGame.swift */; };
 		AC2AD5C82B928F2E00BC2183 /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5C72B928F2E00BC2183 /* CongratulationsView.swift */; };
+		AC3D8B942B93B18900AFF0B0 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8B932B93B18900AFF0B0 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		AC2AD5C32B92396F00BC2183 /* TournamentGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentGameView.swift; sourceTree = "<group>"; };
 		AC2AD5C52B926FBE00BC2183 /* TournamentEndGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentEndGame.swift; sourceTree = "<group>"; };
 		AC2AD5C72B928F2E00BC2183 /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
+		AC3D8B932B93B18900AFF0B0 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,16 +205,14 @@
 				AC2AD4842B8A05CB00BC2183 /* Splash.swift */,
 				AC2AD48C2B8A452D00BC2183 /* Welcome.swift */,
 				AC2AD4922B8A7AE300BC2183 /* Great.swift */,
+				AC3D8B932B93B18900AFF0B0 /* InfoView.swift */,
 				AC2AD5452B8FC71300BC2183 /* NutritionView.swift */,
 				AC2AD5552B8FF79700BC2183 /* EnergyPlusView.swift */,
 				AC2AD5B72B911CDC00BC2183 /* TrainingsView.swift */,
 				AC2AD5B92B912A6E00BC2183 /* TrainQuestionsView.swift */,
 				AC2AD5BD2B91DD8500BC2183 /* CheckView.swift */,
 				AC2AD5BF2B91EBF200BC2183 /* TrainOverView.swift */,
-				AC2AD5C12B92069500BC2183 /* TournamentView.swift */,
-				AC2AD5C32B92396F00BC2183 /* TournamentGameView.swift */,
-				AC2AD5C52B926FBE00BC2183 /* TournamentEndGame.swift */,
-				AC2AD5C72B928F2E00BC2183 /* CongratulationsView.swift */,
+				AC3D8B952B93BCF400AFF0B0 /* Tournament */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -248,6 +248,17 @@
 				AC2AD54D2B8FE42A00BC2183 /* EffectService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AC3D8B952B93BCF400AFF0B0 /* Tournament */ = {
+			isa = PBXGroup;
+			children = (
+				AC2AD5C12B92069500BC2183 /* TournamentView.swift */,
+				AC2AD5C32B92396F00BC2183 /* TournamentGameView.swift */,
+				AC2AD5C52B926FBE00BC2183 /* TournamentEndGame.swift */,
+				AC2AD5C72B928F2E00BC2183 /* CongratulationsView.swift */,
+			);
+			path = Tournament;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +353,7 @@
 				AC2AD52C2B8D557900BC2183 /* CarouselView2.swift in Sources */,
 				AC2AD5462B8FC71300BC2183 /* NutritionView.swift in Sources */,
 				AC2AD4882B8A063400BC2183 /* UserDefaults.swift in Sources */,
+				AC3D8B942B93B18900AFF0B0 /* InfoView.swift in Sources */,
 				AC2AD4022B86B6D600BC2183 /* ContentView.swift in Sources */,
 				AC2AD52F2B8E005400BC2183 /* QuestionModel.swift in Sources */,
 				AC2AD5BA2B912A6E00BC2183 /* TrainQuestionsView.swift in Sources */,

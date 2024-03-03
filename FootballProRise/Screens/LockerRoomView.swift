@@ -7,6 +7,7 @@ import SwiftUI
 struct LockerRoomView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var vm: GameLogic
+    @State var coef: Double = 1
     
     var body: some View {
         ZStack {
@@ -199,7 +200,7 @@ struct LockerRoomView: View {
                     ForEach(1..<8) { i in
                     Image("l\(i)")
                             .resizableToFit()
-                            .frame(width: i == 1 ? 45 : 33)
+                            .frame(width: i == 1 ? 45*coef : 33*coef)
                             .opacity(vm.league != i ? 0.6 : 1)
                             .scaleEffect(vm.league != i ? 1 : 1.4)
                             .overlay {
@@ -240,7 +241,13 @@ struct LockerRoomView: View {
         .foregroundStyle(Color("customWhite"))
         .navigationBarHidden(true)
         .preferredColorScheme(.dark)
+        .onAppear {
+            if vm.size.width > 400 {
+                coef = 1.2
+            }
+        }
     }
+        
 }
 
 #Preview {

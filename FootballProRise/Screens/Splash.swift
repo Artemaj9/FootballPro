@@ -9,10 +9,20 @@ struct Splash: View {
     
     var body: some View {
         ZStack {
-            Image("splash")
-                .resizableToFill()
-                .scaleEffect(1.01)
-                .ignoresSafeArea()
+            Background(image:"splash")
+                .overlay {
+                    GeometryReader { geo in
+                        Color.clear
+                            .onAppear {
+                                vm.size = geo.size
+                                print("width: \(vm.size.width)")
+                                print("height: \(vm.size.height)")
+                                if vm.size.width > 400 {
+                                    vm.coef = 1.2
+                                }
+                            }
+                    }
+                }
         }
         .ignoresSafeArea()
         .preferredColorScheme(.dark)

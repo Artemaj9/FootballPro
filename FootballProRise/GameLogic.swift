@@ -6,14 +6,15 @@ import SwiftUI
 import Combine
 
 class GameLogic: ObservableObject {
-    @Published var size =  CGSize(width: 393, height: 852)
+    @Published var size =  CGSize(width: 430, height: 932)
     @Published var isSplash = true
-    @AppStorage("isWelcome") var isWelcome = true
+  //  @AppStorage("isWelcome") var isWelcome = true
+    @Published var isWelcome = true
 
     @Published var selectedAnswer = 0
     
     @AppStorage("name") var name = "Andrew"
-    @AppStorage("lastName") var lastName = "Dandrew"
+    @AppStorage("lastName") var lastName = "Smith"
     @AppStorage("Icon") var playerIcon = 0
     @AppStorage("balance") var balance = 1000
     @AppStorage("energylevel") var energyLevel = 150
@@ -29,11 +30,15 @@ class GameLogic: ObservableObject {
     @Published var trainScore = 0
    // @Published var currentTrainingQuestions = [QMod]()
     
+    @Published var oldName = ""
+    @Published var oldLastName = ""
+    @Published var oldIcon = 0
     @Published var curTraining = 0
     @Published var curTrainQuestion = [0, 0, 0, 0]
     @Published var questionNumber = 1
     @Published var isEndTraining = false
     @Published var isQuestionView = false
+    @Published var coef: Double = 1
     
     
     

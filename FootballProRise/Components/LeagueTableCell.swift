@@ -11,17 +11,17 @@ struct LeagueTableCell: View {
        Rectangle()
             .fill(Color("cellcolor").opacity(0.4))
             .padding(.horizontal)
-            .frame(width: vm.size.width*0.9, height: 80)
+            .frame(width: vm.size.width*0.9, height: 80 * vm.coef)
      
             .overlay(alignment: .topLeading) {
                 HStack {
                     
                     Image("league\(vm.league)")
                         .resizableToFit()
-                        .frame(width: 30, height: 40)
+                        .frame(width: 30*vm.coef, height: 40*vm.coef)
                         .mask {
                             Circle()
-                                .frame(width: 26, height: 26)
+                                .frame(width: 26*vm.coef, height: 26*vm.coef)
                         }
                        
                     Image("op\(vm.opponent)")
@@ -29,7 +29,7 @@ struct LeagueTableCell: View {
                         .frame(width: 30, height: 45)
                         .mask {
                             Circle()
-                                .frame(width: 26, height: 26)
+                                .frame(width: 26*vm.coef, height: 26*vm.coef)
                         }
                     
                     Text(stat.date.formatted(date: .numeric, time: .omitted))
@@ -47,7 +47,7 @@ struct LeagueTableCell: View {
                     
                          Rectangle()
                              .fill(Color("cellcolor").opacity(0.3))
-                             .frame(width: vm.size.width*0.7, height: 20)
+                             .frame(width: vm.size.width*0.7, height: 20*vm.coef)
                         
                              .overlay(alignment: .leading) {
                                  Text("Apex Athletico")
@@ -79,7 +79,7 @@ struct LeagueTableCell: View {
                    
                         Rectangle()
                             .fill(Color("cellcolor").opacity(0.3))
-                            .frame(width: vm.size.width*0.7, height: 20)
+                            .frame(width: vm.size.width*0.7, height: 20*vm.coef)
                             .overlay(alignment: .leading) {
                                 Text(stat.league)
                                     .padding(.leading, 4)
@@ -112,7 +112,7 @@ struct LeagueTableCell: View {
             .overlay(alignment: .trailing) {
                 Rectangle()
                     .fill(Color(stat.score > stat.opponentScore ? "tablegreen" : "tablered"))
-                    .frame(width: 80, height: 80)
+                    .frame(width: 80*vm.coef, height: 80*vm.coef)
                     .overlay {
                         Text(stat.score > stat.opponentScore ? "\(stat.score * 100)" : "-")
                             .font(.custom(.bold, size: 18))

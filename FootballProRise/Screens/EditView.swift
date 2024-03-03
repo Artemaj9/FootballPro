@@ -13,6 +13,9 @@ struct EditView: View {
             Background(image: "lrbg")
                 .overlay(alignment: .topTrailing) {
                     Button {
+                        vm.name = vm.oldName
+                        vm.lastName = vm.oldLastName
+                        vm.playerIcon = vm.oldIcon
                         dismiss()
                     } label: {
                         Image("exit")
@@ -93,7 +96,7 @@ struct EditView: View {
             
             
             Button {
-                
+                dismiss()
             } label: {
                 Image("btnrect")
                     .resizableToFit()
@@ -107,6 +110,11 @@ struct EditView: View {
             }
             
             .offset(y: vm.size.height * 0.32)
+        }
+        .onAppear {
+            vm.oldIcon = vm.playerIcon
+            vm.oldName = vm.name
+            vm.oldLastName = vm.lastName
         }
         .navigationBarHidden(true)
     }

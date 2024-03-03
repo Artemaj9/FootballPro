@@ -42,7 +42,7 @@ class GameLogic: ObservableObject {
     
     //tournament check
     
-    @Published var isToutnament = true
+    @Published var isTournament = true
     @Published var league = 1
     @Published var opponent = 4
     @Published var lastNutrition = 0
@@ -52,16 +52,41 @@ class GameLogic: ObservableObject {
     @Published var score = 3
     @Published var oppponentScore = 2
     @Published var currentQuestion = 1
-    @Published var isWin = true
+    @Published var isWin = false
+    @Published var isGame = false
+    @Published var isEndGame = false
+    @Published var showResult = false
     var cancellables = Set<AnyCancellable>()
     @Published var welcomeCount: Double = 0
     @Published var welcomeOpacity: Double = 0
     
     @Published var nameEdited = false
     @Published var lastNameEdited = false
+    @Published var showCongratulation = false
     
     
+    func resetGame() {
+        score = 0
+        oppponentScore = 0
+        isWin = false
+        isGame = false
+        isEndGame = false
+        showResult = false
+        questionNumber = 1
+    }
     
+    
+    var gameQuestions = [QMod]()
+    
+    func shuffleQuestions() {
+        gameQuestions = [QMod]()
+        for i in 0...3 {
+            for j in (0...19) {
+                gameQuestions.append(allQuestions[i][j])
+            }
+        }
+        gameQuestions.shuffle()
+    }
     
     func setupWelcomeTimer() {
         Timer
@@ -74,7 +99,6 @@ class GameLogic: ObservableObject {
                     if welcomeOpacity < 0.9 {
                         welcomeOpacity += 0.1
                     }
-
                 } else  {
                     for item in cancellables {
                         item.cancel()

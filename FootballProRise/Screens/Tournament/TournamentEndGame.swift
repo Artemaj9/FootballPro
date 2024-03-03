@@ -7,6 +7,7 @@ import SwiftUI
 struct TournamentEndGame: View {
     @EnvironmentObject var vm: GameLogic
     @State private var opacity: Double = 0
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         ZStack {
@@ -104,14 +105,34 @@ struct TournamentEndGame: View {
                             }
                     }
                 }
-                Image("saveoutbtn")
-                    .resizableToFit()
-                    .frame(width: vm.size.width * 0.7)
-                    .opacity(0.9)
-                    .padding(.top, 20)
-                    .opacity(opacity)
+                Button {
+                    if vm.isWin {
+                        vm.balance += 1000
+                        if vm.league < 7 {
+                            vm.league += 1
+                            vm.showCongratulation = true
+                        } else {
+                            vm.resetGame()
+                            dismiss()
+                        }
+                    } else {
+                        vm.resetGame()
+                        dismiss()
+                    }
+                } label: {
+                    Image("saveoutbtn")
+                        .resizableToFit()
+                        .frame(width: vm.size.width * 0.7)
+                        .opacity(0.9)
+                        .padding(.top, 20)
+                        .opacity(opacity)
+                }
             }
             .offset(y: -vm.size.height * 0.07)
+            if vm.showCongratulation {
+                CongratulationsView()
+                    .environmentObject(vm)
+            }
         }
         .overlay(alignment: .bottom) {
             ZStack {

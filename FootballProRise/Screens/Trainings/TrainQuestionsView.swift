@@ -69,6 +69,8 @@ struct TrainQuestionsView: View {
                                     .font(.custom(.regular, size: 19))
                                     .foregroundStyle(Color("customWhite"))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
+                                    .minimumScaleFactor(0.5)
+                                    .lineLimit(1)
                                 Spacer()
                                 
                             }
@@ -101,6 +103,8 @@ struct TrainQuestionsView: View {
                                     .font(.custom(.regular, size: 19))
                                     .foregroundStyle(Color("customWhite"))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
+                                    .minimumScaleFactor(0.5)
+                                    .lineLimit(1)
                                 Spacer()
                                 
                             }
@@ -134,6 +138,8 @@ struct TrainQuestionsView: View {
                                     .font(.custom(.regular, size: 19))
                                     .foregroundStyle(Color("customWhite"))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
+                                    .minimumScaleFactor(0.5)
+                                    .lineLimit(1)
                                 Spacer()
                                 
                             }
@@ -170,6 +176,8 @@ struct TrainQuestionsView: View {
                                     .font(.custom(.regular, size: 19))
                                     .foregroundStyle(Color("customWhite"))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
+                                    .minimumScaleFactor(0.5)
+                                    .lineLimit(1)
                                 Spacer()
                                 
                             }
@@ -190,7 +198,7 @@ struct TrainQuestionsView: View {
                         vm.totalEnergyLose += 10
                     }
                     
-                    vm.isToutnament = false
+                    vm.isTournament = false
                     vm.selectedAnswer = 0
                     withAnimation {
                         vm.checkView = true

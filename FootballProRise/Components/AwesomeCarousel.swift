@@ -34,6 +34,7 @@ struct AwesomeCarousel: View {
                         Image(i == relativeLoc() + 1 ? "greenelipse" : "elipse")
                             .resizableToFit()
                             .frame(width: 12, height: 12)
+                            .opacity(0.8)
                     }
                 }
                 .padding(.bottom)

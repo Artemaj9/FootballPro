@@ -10,6 +10,8 @@ struct CongratulationsView: View {
     @State var opacity: Double = 0
     @State var saturation: Double = 0
     @State var grayScale: Double = 1
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         ZStack {
             
@@ -51,14 +53,15 @@ struct CongratulationsView: View {
                     .padding(.top, 20)
                     .grayscale(grayScale)
                 
-                Text("Horizon\nHeroes")
+                Text(leagueName[vm.league - 1])
                     .font(.custom(.bold, size: 37))
                     .lineSpacing(10)
                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.53), radius: 4, y: 4)
                     .offset(y: -12)
                 
                 Button {
-                    
+                    vm.resetGame()
+                    dismiss()
                 } label: {
                     Text("Tap to continue")
                         .font(.custom(.extraBold, size: 23))

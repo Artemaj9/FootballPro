@@ -63,7 +63,7 @@ struct TournamentGameView: View {
                 .opacity(0.9)
                 
                 
-                Text(strengthQuest[2].question)
+                Text(vm.gameQuestions[vm.currentQuestion].question)
                     .foregroundStyle(Color("customWhite"))
                     .font(.custom(.medium, size: 24))
                     .multilineTextAlignment(.center)
@@ -83,9 +83,6 @@ struct TournamentGameView: View {
                                         .offset(x: 1, y: -1)
                                         .opacity(vm.selectedAnswer == 1 ? 1 : 0)
                                         .animation(.easeInOut(duration: 1),value: vm.selectedAnswer)
-                                    
-                                    // .scaleEffect(1.14)
-                                    //
                                 }
                                 .onTapGesture {
                                     
@@ -97,10 +94,12 @@ struct TournamentGameView: View {
                                 }
                                 .padding(6)
                                 
-                                Text(strengthQuest[0].answers[0])
+                                Text(vm.gameQuestions[vm.currentQuestion].answers[0])
                                     .font(.custom(.regular, size: 19))
                                     .foregroundStyle(Color("customWhite"))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
+                                    .minimumScaleFactor(0.5)
+                                    .lineLimit(1)
                                 Spacer()
                                 
                             }
@@ -132,10 +131,12 @@ struct TournamentGameView: View {
                                     }
                                 }
                                 .padding(6)
-                                Text(strengthQuest[0].answers[1])
+                                Text(vm.gameQuestions[vm.currentQuestion].answers[1])
                                     .font(.custom(.regular, size: 19))
                                     .foregroundStyle(Color("customWhite"))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
+                                    .minimumScaleFactor(0.5)
+                                    .lineLimit(1)
                                 Spacer()
                                 
                             }
@@ -165,10 +166,12 @@ struct TournamentGameView: View {
                                 }
                                 .padding(6)
                                 
-                                Text(strengthQuest[0].answers[2])
+                                Text(vm.gameQuestions[vm.currentQuestion].answers[2])
                                     .font(.custom(.regular, size: 19))
                                     .foregroundStyle(Color("customWhite"))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
+                                    .minimumScaleFactor(0.5)
+                                    .lineLimit(1)
                                 Spacer()
                                 
                             }
@@ -201,10 +204,12 @@ struct TournamentGameView: View {
                                 .padding(6)
                                 
                                 
-                                Text(strengthQuest[0].answers[3])
+                                Text(vm.gameQuestions[vm.currentQuestion].answers[3])
                                     .font(.custom(.regular, size: 19))
                                     .foregroundStyle(Color("customWhite"))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
+                                    .minimumScaleFactor(0.5)
+                                    .lineLimit(1)
                                 Spacer()
                                 
                             }
@@ -212,23 +217,51 @@ struct TournamentGameView: View {
                         }
                 }
                 .padding(.horizontal, 24)
-                Image("readybtn")
-                    .resizableToFit()
-                    .padding(.horizontal, 24)
+                
+                Button {
+                    
+                    if vm.gameQuestions[vm.currentQuestion].rightanswerIndex == vm.selectedAnswer - 1 {
+                        vm.isRigthAnswer = true
+                        vm.score += 1
+                    } else {
+                        vm.isRigthAnswer = false
+                        vm.oppponentScore += 1
+                    }
+                    vm.isTournament = true
+                    vm.showResult = true
+                    vm.selectedAnswer = 0
+                    
+                } label: {
+                    Image("readybtn")
+                        .resizableToFit()
+                        .padding(.horizontal, 24)
+                }
             }
             .offset(y: -vm.size.height * 0.06)
+            
+            if vm.showResult {
+                CheckView()
+                    .environmentObject(vm)
+            }
+            
+            if vm.isEndGame {
+                TournamentEndGame()
+                    .environmentObject(vm)
+            }
         }
         .ignoresSafeArea()
         .overlay(alignment: .bottomTrailing) {
-            Image("cup2")
-                .resizableToFit()
-                .frame(width: vm.size.width * 0.45)
-                .offset(y: vm.size.height * 0.04)
+
+//                Image("cup2")
+//                    .resizableToFit()
+//                    .frame(width: vm.size.width * 0.45)
+//                    .offset(y: vm.size.height * 0.04)
+//                    .opacity(vm.showResult ? 0 : 1)
         }
     }
 }
 
-#Preview {
-    TournamentGameView()
-        .environmentObject(GameLogic())
-}
+//#Preview {
+//    TournamentGameView()
+//        .environmentObject(GameLogic())
+//}

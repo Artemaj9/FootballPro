@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "tcheckbg.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

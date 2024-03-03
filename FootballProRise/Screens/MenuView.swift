@@ -63,7 +63,7 @@ struct MenuView: View {
                                             .font(.custom(.regular, size: 12))
                                             .offset(y: -2)
                                         Text(legueName[vm.league-1])
-                                            .font(.custom(.semibold, size: 14))
+                                            .font(.custom(.semibold, size: 12))
                                             .offset(y: 2)
                                     }
                                 }

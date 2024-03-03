@@ -82,7 +82,7 @@ struct TournamentView: View {
                                     Image("league\(vm.league)")
                                         .resizableToFit()
                                         .padding(.horizontal)
-                                    Text("Horizon\nHeroes")
+                                    Text(leagueName[vm.league - 1])
                                         .font(.custom(.bold, size: 14))
                                         .offset(y: -8)
                                 }
@@ -93,16 +93,24 @@ struct TournamentView: View {
                                     Image("op\(vm.opponent)")
                                         .resizableToFit()
                                         .padding(.horizontal)
-                                    Text("Horizon\nHeroes")
+                                    Text(opponents[vm.opponent - 1])
                                         .font(.custom(.regular, size: 14))
                                         .offset(y: -8)
                                 }
                             }
                             .padding(.vertical)
-                            
-                            Image("startbtn")
-                                .resizableToFit()
-                                .padding(.horizontal)
+                           
+                            Button {
+                                vm.shuffleQuestions()
+                                vm.currentQuestion = 1
+                                vm.score = 0
+                                vm.oppponentScore = 0
+                                vm.isGame = true
+                            } label: {
+                                Image("startbtn")
+                                    .resizableToFit()
+                                    .padding(.horizontal)
+                            }
                         }
                         .foregroundStyle(Color("customWhite"))
                         .multilineTextAlignment(.center)
@@ -112,15 +120,25 @@ struct TournamentView: View {
                     }
             }
             .offset(y: -vm.size.height*0.04)
+            
+            if vm.isGame {
+                TournamentGameView()
+                    .environmentObject(vm)
+            }
+            
             }
         .overlay(alignment: .bottomTrailing) {
             Image("cup2")
                 .resizableToFit()
                 .frame(width: vm.size.width * 0.45)
                 .offset(y: vm.size.height * 0.04)
+                .opacity(vm.showResult || vm.isEndGame ? 0 : 1)
         }
         .navigationBarHidden(true)
         .preferredColorScheme(.dark)
+        .onAppear {
+            vm.opponent = Int.random(in: 1...10)
+        }
     }
 }
 

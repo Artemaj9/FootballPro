@@ -27,13 +27,12 @@ struct TrainingsView: View {
                             VStack(spacing: 4) {
                                 HStack {
                                     Text("\(vm.trainingsDone[0])")
-                                        .foregroundStyle(Color("customWhite"))
                                         .font(.custom(.black, size: 12))
                                     +
                                     Text("/4 Done")
-                                        .foregroundStyle(Color("customWhite"))
                                         .font(.custom(.semibold, size: 12))
                                 }
+                                .foregroundStyle(Color("customWhite"))
                                 .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
                                 
                                 Text("STRENGTH")
@@ -63,13 +62,12 @@ struct TrainingsView: View {
                             VStack(spacing: 4) {
                                 HStack {
                                     Text("\(vm.trainingsDone[1])")
-                                        .foregroundStyle(Color("customWhite"))
                                         .font(.custom(.black, size: 12))
                                     +
                                     Text("/4 Done")
-                                        .foregroundStyle(Color("customWhite"))
                                         .font(.custom(.semibold, size: 12))
                                 }
+                                .foregroundStyle(Color("customWhite"))
                                 .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
                                 
                                 Text("ENDURANCE")
@@ -103,13 +101,12 @@ struct TrainingsView: View {
                             VStack(spacing: 4) {
                                 HStack {
                                     Text("\(vm.trainingsDone[2])")
-                                        .foregroundStyle(Color("customWhite"))
                                         .font(.custom(.black, size: 12))
                                     +
                                     Text("/4 Done")
-                                        .foregroundStyle(Color("customWhite"))
                                         .font(.custom(.semibold, size: 12))
                                 }
+                                .foregroundStyle(Color("customWhite"))
                                 .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
                                 
                                 Text("SPEED")
@@ -139,13 +136,12 @@ struct TrainingsView: View {
                             VStack(spacing: 4) {
                                 HStack {
                                     Text("\(vm.trainingsDone[3])")
-                                        .foregroundStyle(Color("customWhite"))
                                         .font(.custom(.black, size: 12))
                                     +
                                     Text("/4 Done")
-                                        .foregroundStyle(Color("customWhite"))
                                         .font(.custom(.semibold, size: 12))
                                 }
+                                .foregroundStyle(Color("customWhite"))
                                 .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
                                 
                                 Text("KNOWLEDGE")

@@ -41,7 +41,12 @@ let lastnames = ["Johnson", "White", "Martinez", "Thompson", "Brown", "Rodriguez
 "Oliveira", "Costa", "Ramos", "Pereira", "Gonzalez", "Ferreira", "Almeida", "Lima", "Souza",
 "Pereira"]
 
-let legueName = ["Horizon Heroes"]
+let legueName = ["Meadowside Mavericks", "Horizon Heroes", "Phoenix United", "Summit Strikers", "Apex Athletice", "Stellar Stars FC", "Legends United"]
+
+let leagueName = ["Meadowside\nMavericks", "Horizon\nHeroes", "Phoenix\nUnited", "Summit\nStrikers", "Apex\nAthletice", "Stellar\nStars FC", "Legends\nUnited"]
+
+let opponents = ["Riverside\nRoarers", "Titan\nUnited", "Urban\nRangers", "Dinamo\nCity FC","Victory\nVanguard", "Elite\nFusion FC", "Eclipse\nUnited", "Velocity\nVipers FC",
+                 "Royal\nBlaze FC", "Golden\nLions"]
 
 
 let trainingBg = ["strength", "endurance", "speed", "knowledge"]

@@ -10,11 +10,16 @@ struct CheckView: View {
     
     var body: some View {
         ZStack {
-            Color("darkbg")
+            if vm.isTournament {
+                Background(image: "tcheckbg")
+            } else {
+                Color("darkbg")
+            }
             GradAnimation(color: "sea")
                 .rotationEffect(.degrees(180))
                 .opacity(0.2)
-            MagicGradient()
+            
+           MagicGradient()
                 .offset(y: -vm.size.height * 0.03)
             VStack {
                 ZStack {
@@ -27,7 +32,7 @@ struct CheckView: View {
                         }
                 }
                 
-                if vm.isToutnament {
+                if vm.isTournament {
                     Image(vm.isRigthAnswer ? "league\(vm.league)" : "op\(vm.opponent)")
                         .resizableToFit()
                         .frame(width: vm.size.width * 0.4)
@@ -38,26 +43,38 @@ struct CheckView: View {
                         .frame(width: vm.size.width * 0.6)
                 }
                 
-                Text(vm.isToutnament ? "+ 1" : vm.isRigthAnswer ? "+ 50" : "- 10")
+                Text(vm.isTournament ? "+ 1" : vm.isRigthAnswer ? "+ 50" : "- 10")
                     .foregroundStyle(.white)
                     .font(.custom(.bold, size: 50))
                     .opacity(opacity)
                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 2, y: 2)
                 Button {
-                
-                    if vm.questionNumber < 5 {
-                        vm.questionNumber += 1
-                    }
-                    if  vm.curTrainQuestion[vm.curTraining] % 5 < 4 {
-                        vm.curTrainQuestion[vm.curTraining] += 1
+                    if !vm.isTournament {
+                        if vm.questionNumber < 5 {
+                            vm.questionNumber += 1
+                        }
+                        if  vm.curTrainQuestion[vm.curTraining] % 5 < 4 {
+                            vm.curTrainQuestion[vm.curTraining] += 1
+                        } else {
+                            vm.isEndTraining = true
+                        }
+                        
+                        withAnimation {
+                            vm.checkView = false
+                        }
                     } else {
-                        vm.isEndTraining = true
+                        if vm.currentQuestion < 9 {
+                            vm.currentQuestion += 1
+                            vm.showResult = false
+                        } else {
+                            if vm.score > vm.oppponentScore {
+                                vm.isWin = true
+                            } else {
+                                vm.isWin = false
+                            }
+                            vm.isEndGame = true
+                        }
                     }
-                    
-                    withAnimation {
-                        vm.checkView = false
-                    }
-                 
                 } label: {
                     Image("nextbtn")
                         .resizableToFit()

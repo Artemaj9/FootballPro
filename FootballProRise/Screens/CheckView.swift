@@ -72,6 +72,7 @@ struct CheckView: View {
                             } else {
                                 vm.isWin = false
                             }
+                            vm.showResult = false
                             vm.isEndGame = true
                         }
                     }

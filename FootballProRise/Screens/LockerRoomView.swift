@@ -80,9 +80,11 @@ struct LockerRoomView: View {
                                         .font(.custom(.semibold, size: 12))
                                     
                                     Button {
-                                        vm.curTraining = 0
-                                        vm.curTrainQuestion[0] = vm.trainingsDone[0]*5
-                                        vm.isQuestionView = true
+                                        if vm.energyLevel >= 50 {
+                                            vm.curTraining = 0
+                                            vm.curTrainQuestion[0] = vm.trainingsDone[0]*5
+                                            vm.isQuestionView = true
+                                        }
                                     } label: {
                                         Image(vm.trainingsDone[0] != 4 ? "btnplay" :  "check")
                                             .resizableToFit()
@@ -108,9 +110,11 @@ struct LockerRoomView: View {
                                         .font(.custom(.semibold, size: 12))
                                     
                                     Button {
-                                        vm.curTraining = 1
-                                        vm.curTrainQuestion[1] = vm.trainingsDone[1]*5
-                                        vm.isQuestionView = true
+                                        if vm.energyLevel >= 50 {
+                                            vm.curTraining = 1
+                                            vm.curTrainQuestion[1] = vm.trainingsDone[1]*5
+                                            vm.isQuestionView = true
+                                        }
                                     } label: {
                                         Image(vm.trainingsDone[1] != 4 ? "btnplay" :  "check")
                                             .resizableToFit()
@@ -139,9 +143,11 @@ struct LockerRoomView: View {
                                         .font(.custom(.semibold, size: 12))
                                     
                                     Button {
-                                        vm.curTraining = 2
-                                        vm.curTrainQuestion[2] = vm.trainingsDone[2]*5
-                                        vm.isQuestionView = true
+                                        if vm.energyLevel >= 50 {
+                                            vm.curTraining = 2
+                                            vm.curTrainQuestion[2] = vm.trainingsDone[2]*5
+                                            vm.isQuestionView = true
+                                        }
                                     } label: {
                                         Image(vm.trainingsDone[2] != 4 ? "btnplay" :  "check")
                                             .resizableToFit()
@@ -166,9 +172,11 @@ struct LockerRoomView: View {
                                         .font(.custom(.semibold, size: 12))
                                     
                                     Button {
-                                        vm.curTraining = 3
-                                        vm.curTrainQuestion[3] = vm.trainingsDone[3]*5
-                                        vm.isQuestionView = true
+                                        if vm.energyLevel >= 50 {
+                                            vm.curTraining = 3
+                                            vm.curTrainQuestion[3] = vm.trainingsDone[3]*5
+                                            vm.isQuestionView = true
+                                        }
                                     } label: {
                                         Image(vm.trainingsDone[3] != 4 ? "btnplay" :  "check")
                                             .resizableToFit()
@@ -205,8 +213,9 @@ struct LockerRoomView: View {
                     }
                 }
                 .padding()
-                Button {
-                    
+                NavigationLink {
+                    LeagueTableView()
+                        .environmentObject(vm)
                 } label: {
                     Image("leaguetablbtn")
                         .resizableToFit()
@@ -222,6 +231,11 @@ struct LockerRoomView: View {
                 TrainQuestionsView()
                     .environmentObject(vm)
             }
+            
+//            if  vm.showTbale {
+//                LeagueTableView()
+//                    .environmentObject(vm)
+//            }
         }
         .foregroundStyle(Color("customWhite"))
         .navigationBarHidden(true)

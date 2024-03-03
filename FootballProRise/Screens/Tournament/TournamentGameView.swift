@@ -252,11 +252,6 @@ struct TournamentGameView: View {
         .ignoresSafeArea()
         .overlay(alignment: .bottomTrailing) {
 
-//                Image("cup2")
-//                    .resizableToFit()
-//                    .frame(width: vm.size.width * 0.45)
-//                    .offset(y: vm.size.height * 0.04)
-//                    .opacity(vm.showResult ? 0 : 1)
         }
     }
 }

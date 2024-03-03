@@ -58,6 +58,9 @@
 		AC3D8B9F2B94069800AFF0B0 /* HorizontalScrollGrad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8B9E2B94069800AFF0B0 /* HorizontalScrollGrad.swift */; };
 		AC3D8BA12B940D1C00AFF0B0 /* AnyTransition+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BA02B940D1C00AFF0B0 /* AnyTransition+Ext.swift */; };
 		AC3D8BA52B94C4BE00AFF0B0 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BA42B94C4BE00AFF0B0 /* Images.swift */; };
+		AC3D8BA72B94FC5900AFF0B0 /* LeagueTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BA62B94FC5900AFF0B0 /* LeagueTableView.swift */; };
+		AC3D8BA92B94FD0B00AFF0B0 /* LeagueTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BA82B94FD0B00AFF0B0 /* LeagueTableCell.swift */; };
+		AC3D8BAB2B9507C600AFF0B0 /* StatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BAA2B9507C600AFF0B0 /* StatModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +117,9 @@
 		AC3D8B9E2B94069800AFF0B0 /* HorizontalScrollGrad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollGrad.swift; sourceTree = "<group>"; };
 		AC3D8BA02B940D1C00AFF0B0 /* AnyTransition+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Ext.swift"; sourceTree = "<group>"; };
 		AC3D8BA42B94C4BE00AFF0B0 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		AC3D8BA62B94FC5900AFF0B0 /* LeagueTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueTableView.swift; sourceTree = "<group>"; };
+		AC3D8BA82B94FD0B00AFF0B0 /* LeagueTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueTableCell.swift; sourceTree = "<group>"; };
+		AC3D8BAA2B9507C600AFF0B0 /* StatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				AC2AD5432B8FB1C000BC2183 /* GradAnimation.swift */,
+				AC3D8BA82B94FD0B00AFF0B0 /* LeagueTableCell.swift */,
 				AC2AD5592B90041100BC2183 /* TrainingHeader.swift */,
 				AC2AD5532B8FEF3800BC2183 /* ScrollGradient.swift */,
 				AC3D8B9E2B94069800AFF0B0 /* HorizontalScrollGrad.swift */,
@@ -229,6 +236,7 @@
 				AC2AD5BD2B91DD8500BC2183 /* CheckView.swift */,
 				AC3D8B982B93E9AA00AFF0B0 /* LockerRoomView.swift */,
 				AC3D8B9A2B93FF7E00AFF0B0 /* EditView.swift */,
+				AC3D8BA62B94FC5900AFF0B0 /* LeagueTableView.swift */,
 				AC3D8B952B93BCF400AFF0B0 /* Tournament */,
 			);
 			path = Screens;
@@ -256,6 +264,7 @@
 			children = (
 				AC2AD52E2B8E005400BC2183 /* QuestionModel.swift */,
 				AC2AD5492B8FDCED00BC2183 /* NutritionModel.swift */,
+				AC3D8BAA2B9507C600AFF0B0 /* StatModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -390,8 +399,10 @@
 				AC2AD5C42B92397000BC2183 /* TournamentGameView.swift in Sources */,
 				AC2AD5C02B91EBF200BC2183 /* TrainOverView.swift in Sources */,
 				AC2AD5542B8FEF3800BC2183 /* ScrollGradient.swift in Sources */,
+				AC3D8BA92B94FD0B00AFF0B0 /* LeagueTableCell.swift in Sources */,
 				AC2AD52C2B8D557900BC2183 /* CarouselView2.swift in Sources */,
 				AC2AD5462B8FC71300BC2183 /* NutritionView.swift in Sources */,
+				AC3D8BAB2B9507C600AFF0B0 /* StatModel.swift in Sources */,
 				AC2AD4882B8A063400BC2183 /* UserDefaults.swift in Sources */,
 				AC3D8B942B93B18900AFF0B0 /* InfoView.swift in Sources */,
 				AC2AD4022B86B6D600BC2183 /* ContentView.swift in Sources */,
@@ -416,6 +427,7 @@
 				AC2AD4932B8A7AE300BC2183 /* Great.swift in Sources */,
 				AC2AD4852B8A05CB00BC2183 /* Splash.swift in Sources */,
 				AC2AD4002B86B6D600BC2183 /* FootballProRiseApp.swift in Sources */,
+				AC3D8BA72B94FC5900AFF0B0 /* LeagueTableView.swift in Sources */,
 				AC2AD5BE2B91DD8500BC2183 /* CheckView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -106,6 +106,7 @@ struct TournamentView: View {
                                 vm.score = 0
                                 vm.oppponentScore = 0
                                 vm.isGame = true
+                                vm.setupTimer()
                             } label: {
                                 Image("startbtn")
                                     .resizableToFit()
@@ -127,6 +128,10 @@ struct TournamentView: View {
             }
             
             }
+        .onAppear {
+            vm.isTournament = true
+        }
+        
         .overlay(alignment: .bottomTrailing) {
             Image("cup2")
                 .resizableToFit()

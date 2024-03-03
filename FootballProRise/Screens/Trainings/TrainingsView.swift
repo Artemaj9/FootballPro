@@ -40,9 +40,11 @@ struct TrainingsView: View {
                                     .font(.custom(.black, size: 18))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 2, y: 2)
                                 Button {
-                                    vm.curTraining = 0
-                                    vm.curTrainQuestion[0] = vm.trainingsDone[0]*5
-                                    vm.isQuestionView = true
+                                    if vm.energyLevel >= 50 {
+                                        vm.curTraining = 0
+                                        vm.curTrainQuestion[0] = vm.trainingsDone[0]*5
+                                        vm.isQuestionView = true
+                                    }
                                 } label: {
                                     Image(vm.trainingsDone[0] != 4 ? "gobtn" : "checkmarktrain")
                                         .resizableToFit()
@@ -75,9 +77,11 @@ struct TrainingsView: View {
                                     .font(.custom(.black, size: 18))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 2, y: 2)
                                 Button {
-                                    vm.curTraining = 1
-                                    vm.curTrainQuestion[1] = vm.trainingsDone[1]*5
-                                    vm.isQuestionView = true
+                                    if vm.energyLevel >= 50 {
+                                        vm.curTraining = 1
+                                        vm.curTrainQuestion[1] = vm.trainingsDone[1]*5
+                                        vm.isQuestionView = true
+                                    }
                                 } label: {
                                     Image(vm.trainingsDone[1] != 4 ? "gobtn" : "checkmarktrain")
                                         .resizableToFit()
@@ -115,9 +119,11 @@ struct TrainingsView: View {
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 2, y: 2)
                                 
                                 Button {
-                                    vm.curTraining = 2
-                                    vm.curTrainQuestion[2] = vm.trainingsDone[2]*5
-                                    vm.isQuestionView = true
+                                    if vm.energyLevel >= 50 {
+                                        vm.curTraining = 2
+                                        vm.curTrainQuestion[2] = vm.trainingsDone[2]*5
+                                        vm.isQuestionView = true
+                                    }
                                 } label: {
                                     Image(vm.trainingsDone[2] != 4 ? "gobtn" : "checkmarktrain")
                                         .resizableToFit()
@@ -149,9 +155,11 @@ struct TrainingsView: View {
                                     .font(.custom(.black, size: 18))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 2, y: 2)
                                 Button {
-                                    vm.curTraining = 3
-                                    vm.curTrainQuestion[2] = vm.trainingsDone[2]*5
-                                    vm.isQuestionView = true
+                                    if vm.energyLevel >= 50 {
+                                        vm.curTraining = 3
+                                        vm.curTrainQuestion[2] = vm.trainingsDone[2]*5
+                                        vm.isQuestionView = true
+                                    }
                                 } label: {
                                     Image(vm.trainingsDone[3] != 4 ? "gobtn" : "checkmarktrain")
                                         .resizableToFit()

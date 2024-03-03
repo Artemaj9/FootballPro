@@ -48,5 +48,7 @@ let leagueName = ["Meadowside\nMavericks", "Horizon\nHeroes", "Phoenix\nUnited",
 let opponents = ["Riverside\nRoarers", "Titan\nUnited", "Urban\nRangers", "Dinamo\nCity FC","Victory\nVanguard", "Elite\nFusion FC", "Eclipse\nUnited", "Velocity\nVipers FC",
                  "Royal\nBlaze FC", "Golden\nLions"]
 
+let opps = ["Riverside Roarers", "Titan United", "Urban Rangers", "Dinamo City FC","Victory Vanguard", "Elite Fusion FC", "Eclipse United", "Velocity Vipers FC", "Royal Blaze FC", "Golden Lions"]
+
 
 let trainingBg = ["strength", "endurance", "speed", "knowledge"]

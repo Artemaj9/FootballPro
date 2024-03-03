@@ -19,9 +19,6 @@ struct TournamentEndGame: View {
                 .opacity(0.4)
             Color("bluebg")
                 .opacity(vm.isWin ? 0.49 : 0.81)
-                .onTapGesture {
-                    vm.isWin.toggle()
-                }
             
             VStack {
                 txtGrad
@@ -106,6 +103,8 @@ struct TournamentEndGame: View {
                     }
                 }
                 Button {
+                    vm.stats.append(StatModel(league: leagueName[vm.league-1], legueRank: vm.league, score: vm.score, opponent: opps[vm.opponent - 1], opponentNumber: vm.opponent, opponentScore: vm.oppponentScore, timeSec: vm.count, date: Date.now))
+                    UserDefaultsService.shared.saveStructs(structs: vm.stats, forKey: "stats")
                     if vm.isWin {
                         vm.balance += 1000
                         if vm.league < 7 {
@@ -136,17 +135,20 @@ struct TournamentEndGame: View {
         }
         .overlay(alignment: .bottom) {
             ZStack {
-                Image("endcup")
-                    .resizableToFit()
-                    .frame(height: vm.size.height * 0.32)
-                    .opacity(vm.isWin ? 1 : 0.58)
-                    .background {
-                        if vm.isWin {
-                            MagicGradient()
-                                .saturation(1.5)
-                                .blendMode(.hardLight)
+                if !vm.showCongratulation {
+                    Image("endcup")
+                        .resizableToFit()
+                        .frame(height: vm.size.height * 0.32)
+                        .opacity(vm.isWin ? 1 : 0.58)
+                        .opacity(vm.showCongratulation ? 0 : 1)
+                        .background {
+                            if vm.isWin {
+                                MagicGradient()
+                                    .saturation(1.5)
+                                    .blendMode(.hardLight)
+                            }
                         }
-                    }
+                }
             }
         }
         .ignoresSafeArea()

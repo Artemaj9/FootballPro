@@ -167,32 +167,39 @@ struct MenuView: View {
                             .padding(.horizontal, 8)
                         }
                         .overlay(alignment: .leading) {
-                            HStack {
-                                Button {
+                            if vm.league < 7 {
+                                HStack {
                                     
-                                } label: {
-                                    Image("league\(vm.league)")
-                                        .resizableToFit()
-                                        .frame(width: 40)
+                                    if vm.league < 7 {
+                                        Image("league\(vm.league + 1)")
+                                            .resizableToFit()
+                                            .frame(width: 40)
+                                    }
+                                    
+                                    
+                                    VStack(alignment: .leading) {
+                                        Text("Next level:")
+                                            .font(.custom(.regular, size: 12))
+                                            .offset(y: -2)
+                                        
+                                        
+                                        Text(vm.league < 7 ? legueName[vm.league] : legueName[vm.league - 1])
+                                            .font(.custom(.semibold, size: 14))
+                                            .offset(y: 2)
+                                    }
                                 }
-                                
-                                VStack(alignment: .leading) {
-                                    Text("Next level:")
-                                        .font(.custom(.regular, size: 12))
-                                        .offset(y: -2)
-                                    Text(legueName[vm.league-1])
-                                        .font(.custom(.semibold, size: 14))
-                                        .offset(y: 2)
-                                }
+                                .padding(.horizontal, 44)
+                                .padding(.top, 24)
                             }
-                            .padding(.horizontal, 44)
-                            .padding(.top, 24)
                         }
                 }
                 .padding(.top)
             }
             .foregroundStyle(Color("customWhite"))
             .ignoresSafeArea()
+            .onAppear {
+                vm.stats = UserDefaultsService.shared.getStructs(forKey: "stats") ?? [StatModel]()
+            }
         }
         .navigationViewStyle(.stack)
     }

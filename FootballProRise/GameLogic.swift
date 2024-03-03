@@ -36,6 +36,8 @@ class GameLogic: ObservableObject {
     @Published var isEndTraining = false
     @Published var isQuestionView = false
     
+    
+    
     // check view
     @Published var checkView = false
     @Published var isRigthAnswer = false
@@ -63,7 +65,9 @@ class GameLogic: ObservableObject {
     @Published var nameEdited = false
     @Published var lastNameEdited = false
     @Published var showCongratulation = false
-    
+    @Published var count = 0
+    @Published var stats =   [StatModel(league: "Apex Athletico", legueRank: 2, score: 4, opponent: "Urban Rabgers", opponentNumber: 3, opponentScore: 3, timeSec: 3123, date: Date.now), StatModel(league: "Apex Athletico", legueRank: 2, score: 4, opponent: "Urban Rabgers", opponentNumber: 3, opponentScore: 5, timeSec: 3, date: Date.now)]
+
     
     func resetGame() {
         score = 0
@@ -73,6 +77,11 @@ class GameLogic: ObservableObject {
         isEndGame = false
         showResult = false
         questionNumber = 1
+        showCongratulation = false
+        for item in cancellables {
+            item.cancel()
+        }
+        count = 0
     }
     
     
@@ -86,6 +95,17 @@ class GameLogic: ObservableObject {
             }
         }
         gameQuestions.shuffle()
+    }
+    
+    
+    func setupTimer() {
+        Timer
+            .publish(every: 1, on: .main, in: .common)
+            .autoconnect()
+            .sink { [unowned self] _ in
+                    count += 1
+            }
+            .store(in: &cancellables)
     }
     
     func setupWelcomeTimer() {

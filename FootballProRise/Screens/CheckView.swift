@@ -44,9 +44,20 @@ struct CheckView: View {
                     .opacity(opacity)
                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 2, y: 2)
                 Button {
+                
+                    if vm.questionNumber < 5 {
+                        vm.questionNumber += 1
+                    }
+                    if  vm.curTrainQuestion[vm.curTraining] % 5 < 4 {
+                        vm.curTrainQuestion[vm.curTraining] += 1
+                    } else {
+                        vm.isEndTraining = true
+                    }
+                    
                     withAnimation {
                         vm.checkView = false
                     }
+                 
                 } label: {
                     Image("nextbtn")
                         .resizableToFit()

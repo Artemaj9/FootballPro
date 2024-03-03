@@ -103,7 +103,6 @@ struct InfoView: View {
                     .padding(.horizontal)
                     .offset(y: vm.size.height*0.05)
                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.53), radius: 2, y: 2)
-            
         }
         .navigationBarHidden(true)
         .preferredColorScheme(.dark)

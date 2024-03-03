@@ -32,6 +32,7 @@ struct EnergyLevel: View {
                     .offset(x: 20, y: 16)
             }
         }
+        .hueRotation(Angle(degrees: vm.energyLevel <= 50 ? 180 : 0))
     }
 }
 

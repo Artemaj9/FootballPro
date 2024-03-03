@@ -68,12 +68,31 @@ struct TrainOverView: View {
                        
                         VStack(spacing: 4) {
                             Button {
+                                vm.isEndTraining = false
+                                vm.isQuestionView = false
+                                vm.totalMonewWin = 0
+                                vm.totalEnergyLose = 0
+                                vm.trainScore = 0
+                                vm.currentQuestion = 1
+                                vm.questionNumber = 1
+                                if vm.trainingsDone[vm.curTraining] < 4 {
+                                    vm.trainingsDone[vm.curTraining] += 1
+                                }
                             } label: {
                                  Image("continuebtn")
                                     .resizableToFit()
                             }
                             
                             Button {
+                                vm.isEndTraining = false
+                                vm.totalMonewWin = 0
+                                vm.totalEnergyLose = 0
+                                vm.trainScore = 0
+                                vm.trainScore = 0
+                                vm.currentQuestion = 1
+                                vm.questionNumber = 1
+                                vm.curTrainQuestion[vm.curTraining] = vm.trainingsDone[vm.curTraining]*5
+                                vm.isQuestionView = true
                             } label: {
                                  Image("restartbtn")
                                     .resizableToFit()

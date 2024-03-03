@@ -5,20 +5,19 @@
 import SwiftUI
 
 struct TrainQuestionsView: View {
-    let trainingType: String
     @EnvironmentObject var vm: GameLogic
     
     var body: some View {
         ZStack {
-            Background(image: "bg\(trainingType)")
+            Background(image: "bg\(trainingBg[vm.curTraining])q")
             VStack() {
-                TrainingHeader(title: trainingType.uppercased())
+                TrainingHeader(title: trainingBg[vm.curTraining].uppercased())
                     .environmentObject(vm)
                 HStack {
                     Text("Question")
                         .font(.custom(.medium, size: 14))
                     +
-                    Text(" 1")
+                    Text(" \(vm.questionNumber)")
                         .font(.custom(.bold, size: 14))
                     +
                     Text("/5")
@@ -31,7 +30,7 @@ struct TrainQuestionsView: View {
                 .padding(.bottom)
                 .padding(.leading, 12)
                 HStack {
-                    Text(strengthQuest[0].question)
+                    Text(allQuestions[vm.curTraining][vm.curTrainQuestion[vm.curTraining]].question)
                         .foregroundStyle(Color("customWhite"))
                         .font(.custom(.medium, size: 24))
                         .lineSpacing(14)
@@ -55,9 +54,6 @@ struct TrainQuestionsView: View {
                                         .offset(x: 1, y: -1)
                                         .opacity(vm.selectedAnswer == 1 ? 1 : 0)
                                         .animation(.easeInOut(duration: 1),value: vm.selectedAnswer)
-                                    
-                                    // .scaleEffect(1.14)
-                                    //
                                 }
                                 .onTapGesture {
                                     
@@ -69,7 +65,7 @@ struct TrainQuestionsView: View {
                                 }
                                 .padding(6)
                                 
-                                Text(strengthQuest[0].answers[0])
+                                Text(allQuestions[vm.curTraining][vm.curTrainQuestion[vm.curTraining]].answers[0])
                                     .font(.custom(.regular, size: 19))
                                     .foregroundStyle(Color("customWhite"))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
@@ -91,9 +87,6 @@ struct TrainQuestionsView: View {
                                         .offset(x: 1, y: -1)
                                         .opacity(vm.selectedAnswer == 2 ? 1 : 0)
                                         .animation(.easeInOut(duration: 1),value: vm.selectedAnswer)
-                                    
-                                    // .scaleEffect(1.14)
-                                    //
                                 }
                                 .onTapGesture {
                                     
@@ -104,7 +97,7 @@ struct TrainQuestionsView: View {
                                     }
                                 }
                                 .padding(6)
-                                Text(strengthQuest[0].answers[1])
+                                Text(allQuestions[vm.curTraining][vm.curTrainQuestion[vm.curTraining]].answers[1])
                                     .font(.custom(.regular, size: 19))
                                     .foregroundStyle(Color("customWhite"))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
@@ -126,9 +119,6 @@ struct TrainQuestionsView: View {
                                         .offset(x: 1, y: -1)
                                         .opacity(vm.selectedAnswer == 3 ? 1 : 0)
                                         .animation(.easeInOut(duration: 1),value: vm.selectedAnswer)
-                                    
-                                    // .scaleEffect(1.14)
-                                    //
                                 }
                                 .onTapGesture {
                                     
@@ -140,7 +130,7 @@ struct TrainQuestionsView: View {
                                 }
                                 .padding(6)
                                 
-                                Text(strengthQuest[0].answers[2])
+                                Text(allQuestions[vm.curTraining][vm.curTrainQuestion[vm.curTraining]].answers[2])
                                     .font(.custom(.regular, size: 19))
                                     .foregroundStyle(Color("customWhite"))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
@@ -176,7 +166,7 @@ struct TrainQuestionsView: View {
                                 .padding(6)
                                 
                                 
-                                Text(strengthQuest[0].answers[3])
+                                Text(allQuestions[vm.curTraining][vm.curTrainQuestion[vm.curTraining]].answers[3])
                                     .font(.custom(.regular, size: 19))
                                     .foregroundStyle(Color("customWhite"))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 1, y: 1)
@@ -189,6 +179,19 @@ struct TrainQuestionsView: View {
                 .offset(y: vm.size.height * 0.05)
                 
                 Button {
+                    if allQuestions[vm.curTraining][vm.curTrainQuestion[vm.curTraining]].rightanswerIndex == vm.selectedAnswer - 1 {
+                        vm.isRigthAnswer = true
+                        vm.balance += 50
+                        vm.totalMonewWin += 50
+                        vm.trainScore += 1
+                    } else {
+                        vm.isRigthAnswer = false
+                        vm.energyLevel -= 10
+                        vm.totalEnergyLose += 10
+                    }
+                    
+                    vm.isToutnament = false
+                    vm.selectedAnswer = 0
                     withAnimation {
                         vm.checkView = true
                     }
@@ -210,12 +213,17 @@ struct TrainQuestionsView: View {
                     .environmentObject(vm)
             }
             
+            if vm.isEndTraining  {
+                TrainOverView()
+                    .environmentObject(vm)
+            }
+            
         }
         .ignoresSafeArea()
     }
 }
 
 #Preview {
-    TrainQuestionsView(trainingType: "knowledge")
+    TrainQuestionsView()
         .environmentObject(GameLogic())
 }

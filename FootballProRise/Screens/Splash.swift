@@ -8,13 +8,21 @@ struct Splash: View {
     @EnvironmentObject var vm: GameLogic
     
     var body: some View {
-        Image("splash")
-            .resizableToFill()
-            .scaleEffect(1.01)
-            .ignoresSafeArea()
-           
-                AnimationBurst()
-                    .environmentObject(vm)
+        ZStack {
+            Image("splash")
+                .resizableToFill()
+                .scaleEffect(1.01)
+                .ignoresSafeArea()
+        }
+        .ignoresSafeArea()
+        .preferredColorScheme(.dark)
+        .onAppear {
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
+                withAnimation {
+                    self.vm.isSplash = false
+                }
+            }
+        }
     }
 }
 

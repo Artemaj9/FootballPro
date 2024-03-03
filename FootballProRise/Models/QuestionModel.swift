@@ -337,3 +337,5 @@ let footballQuestions: [QMod] = [
          answers: ["Draw", "Tie", "Even match", "Stalemate"],
          rightanswerIndex: 0)
 ]
+
+let allQuestions = [strengthQuest, enduranceQuest, speedQuest, footballQuestions]

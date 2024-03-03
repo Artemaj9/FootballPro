@@ -9,7 +9,7 @@ enum WelcomeTxt {
     static let welcome = "It's time to start your journey towards becoming a legendary football player."
     static let title  = "Before we kick off,"
     static  let kicksub = "let's create your football player."
-    static let kickOff = "Choose an avatar that represents your character."
+    static let kickOff = "Choose an avatar that\nrepresents your character."
     static let great = "Great!"
     static let greatdescr = "Next, please, introduce\nyour player."
 }
@@ -42,3 +42,6 @@ let lastnames = ["Johnson", "White", "Martinez", "Thompson", "Brown", "Rodriguez
 "Pereira"]
 
 let legueName = ["Horizon Heroes"]
+
+
+let trainingBg = ["strength", "endurance", "speed", "knowledge"]

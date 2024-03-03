@@ -11,6 +11,7 @@ struct MenuView: View {
             ZStack {
                 Background(image: "welcomebg")
                     .saturation(1.2)
+                GradAnimation(color: "sea")
                 
                 VStack(spacing: 8) {
                     Image("playerinfobg")
@@ -132,9 +133,14 @@ struct MenuView: View {
                     Image("lockerroom")
                         .resizableToFit()
                         .overlay(alignment: .trailing) {
-                            Image("toroom")
-                                .resizableToFit()
-                                .frame(width: 36, height: 36)
+                            NavigationLink {
+                                LockerRoomView()
+                                    .environmentObject(vm)
+                            } label: {
+                                Image("toroom")
+                                    .resizableToFit()
+                                    .frame(width: 36, height: 36)
+                            }
                                 .offset(x: 8)
                         }
                         .padding(.horizontal, 24)

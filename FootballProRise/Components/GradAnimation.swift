@@ -10,6 +10,7 @@ struct GradAnimation: View {
     @State var end = UnitPoint(x: 0, y: 1)
     @State var opacity: Double = 1
     let color: String
+    var delay: TimeInterval = 0
     
     var body: some View {
 
@@ -24,7 +25,7 @@ struct GradAnimation: View {
         .opacity(opacity)
         .ignoresSafeArea()
         .onAppear {
-            withAnimation(.smooth(duration: 3)) {
+            withAnimation(.smooth(duration: 3).delay(delay)) {
                 start = UnitPoint(x: 0, y: 0)
                 end = UnitPoint(x: 0, y: 1)
                 opacity = 0

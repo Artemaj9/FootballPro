@@ -31,3 +31,12 @@ let grayGrad = LinearGradient(
     startPoint: .top,
     endPoint: .bottom
 )
+
+let borderGrad = LinearGradient(
+    colors: [
+        Color("borderlight"),
+        Color("borderdark")
+    ],
+    startPoint: .top,
+    endPoint: .bottom
+)

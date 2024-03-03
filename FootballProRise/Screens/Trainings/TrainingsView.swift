@@ -40,9 +40,17 @@ struct TrainingsView: View {
                                     .foregroundStyle(Color("customWhite"))
                                     .font(.custom(.black, size: 18))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 2, y: 2)
-                                
-                                Image(vm.trainingsDone[0] != 4 ? "gobtn" : "checkmarktrain")
-                                    .resizableToFit()
+                                Button {
+                                    vm.curTraining = 0
+                                    vm.curTrainQuestion[0] = vm.trainingsDone[0]*5
+                                    vm.isQuestionView = true
+                                } label: {
+                                    Image(vm.trainingsDone[0] != 4 ? "gobtn" : "checkmarktrain")
+                                        .resizableToFit()
+                                }
+                                .disabled(vm.trainingsDone[0] == 4)
+                                .opacity(vm.trainingsDone[0] == 4 ? 0.8 : 1)
+                         
                             }
                             .padding(.vertical)
                             .padding(.horizontal, 8)
@@ -68,9 +76,17 @@ struct TrainingsView: View {
                                     .foregroundStyle(Color("customWhite"))
                                     .font(.custom(.black, size: 18))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 2, y: 2)
-                                
-                                Image(vm.trainingsDone[1] != 4 ? "gobtn" : "checkmarktrain")
-                                    .resizableToFit()
+                                Button {
+                                    vm.curTraining = 1
+                                    vm.curTrainQuestion[1] = vm.trainingsDone[1]*5
+                                    vm.isQuestionView = true
+                                } label: {
+                                    Image(vm.trainingsDone[1] != 4 ? "gobtn" : "checkmarktrain")
+                                        .resizableToFit()
+                                }
+                                .disabled(vm.trainingsDone[1] == 4)
+                                .opacity(vm.trainingsDone[1] == 4 ? 0.8 : 1)
+                             
                             }
                             .padding(.vertical)
                             .padding(.horizontal, 8)
@@ -101,8 +117,16 @@ struct TrainingsView: View {
                                     .font(.custom(.black, size: 18))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 2, y: 2)
                                 
-                                Image(vm.trainingsDone[2] != 4 ? "gobtn" : "checkmarktrain")
-                                    .resizableToFit()
+                                Button {
+                                    vm.curTraining = 2
+                                    vm.curTrainQuestion[2] = vm.trainingsDone[2]*5
+                                    vm.isQuestionView = true
+                                } label: {
+                                    Image(vm.trainingsDone[2] != 4 ? "gobtn" : "checkmarktrain")
+                                        .resizableToFit()
+                                }
+                                .disabled(vm.trainingsDone[2] == 4)
+                                .opacity(vm.trainingsDone[2] == 4 ? 0.8 : 1)
                             }
                             .padding(.vertical)
                             .padding(.horizontal, 8)
@@ -128,9 +152,17 @@ struct TrainingsView: View {
                                     .foregroundStyle(Color("customWhite"))
                                     .font(.custom(.black, size: 18))
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 2, y: 2)
-                                
-                                Image(vm.trainingsDone[3] != 4 ? "gobtn" : "checkmarktrain")
-                                    .resizableToFit()
+                                Button {
+                                    vm.curTraining = 3
+                                    vm.curTrainQuestion[2] = vm.trainingsDone[2]*5
+                                    vm.isQuestionView = true
+                                } label: {
+                                    Image(vm.trainingsDone[3] != 4 ? "gobtn" : "checkmarktrain")
+                                        .resizableToFit()
+                                }
+                                .disabled(vm.trainingsDone[3] == 4)
+                                .opacity(vm.trainingsDone[3] == 4 ? 0.8 : 1)
+                             
                             }
                             .padding(.vertical)
                             .padding(.horizontal, 8)
@@ -139,7 +171,17 @@ struct TrainingsView: View {
                 
                 Spacer()
             }
-            .offset(y: vm.size.height * 0.1 )
+            .offset(y: vm.size.height * 0.1)
+            
+            if vm.isQuestionView {
+                TrainQuestionsView()
+                    .environmentObject(vm)
+            }
+            
+            if vm.isEndTraining {
+                TrainOverView()
+                    .environmentObject(vm)
+            }
         }
         .ignoresSafeArea()
         .preferredColorScheme(.dark)

@@ -16,7 +16,10 @@ struct FoodSlot: View {
                 if vm.balance >= nutritions[number-1].price {
                     vm.balance -= nutritions[number-1].price
                     vm.energyLevel += nutritions[number-1].energy
-                    
+                    withAnimation {
+                        vm.lastNutrition = nutritions[number-1].energy
+                        vm.isPlusEnergy = true
+                    }
                 }
                     
             } label: {

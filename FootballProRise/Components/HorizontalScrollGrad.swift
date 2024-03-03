@@ -8,10 +8,19 @@
 import SwiftUI
 
 struct HorizontalScrollGrad: View {
+    
+    let stops = [Gradient.Stop(color: Color.green.opacity(0), location: 0.00),
+                 Gradient.Stop(color: .green.opacity(0.4), location: 0.05),
+                 Gradient.Stop(color: .green.opacity(0.9), location: 0.25),
+                 
+                 Gradient.Stop(color: .green, location: 0.9),
+                 Gradient.Stop(color: Color.red.opacity(0), location: 1)]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LinearGradient(stops: stops, startPoint: .leading, endPoint: .trailing)
     }
 }
+
 
 #Preview {
     HorizontalScrollGrad()

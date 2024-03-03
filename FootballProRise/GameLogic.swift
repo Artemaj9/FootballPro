@@ -8,16 +8,15 @@ import Combine
 class GameLogic: ObservableObject {
     @Published var size =  CGSize(width: 393, height: 852)
     @Published var isSplash = true
-    @Published var isWelcome = true
-    
+    @AppStorage("isWelcome") var isWelcome = true
 
     @Published var selectedAnswer = 0
     
-    @Published var name = "Andrew"
-    @Published var lastName = "Dandrew"
-    @Published var playerIcon = 0
-    @Published var balance = 1000
-    @Published var energyLevel = 150
+    @AppStorage("name") var name = "Andrew"
+    @AppStorage("lastName") var lastName = "Dandrew"
+    @AppStorage("Icon") var playerIcon = 0
+    @AppStorage("balance") var balance = 1000
+    @AppStorage("energylevel") var energyLevel = 150
     
     // nutrition
     @Published var nutritionOpacity = Array(repeating: 1.0, count: 12)
@@ -45,7 +44,7 @@ class GameLogic: ObservableObject {
     //tournament check
     
     @Published var isTournament = true
-    @Published var league = 1
+    @AppStorage("league") var league = 1
     @Published var opponent = 4
     @Published var lastNutrition = 0
     

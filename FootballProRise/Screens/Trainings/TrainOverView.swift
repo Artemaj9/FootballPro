@@ -78,6 +78,7 @@ struct TrainOverView: View {
                                 if vm.trainingsDone[vm.curTraining] < 4 {
                                     vm.trainingsDone[vm.curTraining] += 1
                                 }
+                                UserDefaultsService.shared.saveStructs(structs: vm.trainingsDone, forKey: "trainingsDone")
                             } label: {
                                  Image("continuebtn")
                                     .resizableToFit()

@@ -51,7 +51,7 @@ struct EditView: View {
                                     .shadow(color: .black.opacity(0.23), radius: 2, y:2)
                             }
                         Button {
-                            
+                            vm.name = names.randomElement() ?? "John"
                         } label: {
                             Image("editbg")
                                 .resizableToFit()
@@ -78,7 +78,7 @@ struct EditView: View {
                                   //  .opacity(0.3)
                             }
                         Button {
-                            
+                            vm.lastName = lastnames.randomElement() ?? "Smith"
                         } label: {
                             Image("editbg")
                                 .resizableToFit()

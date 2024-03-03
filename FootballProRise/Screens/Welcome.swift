@@ -6,9 +6,10 @@ import SwiftUI
 
 struct Welcome: View {
     @EnvironmentObject var vm: GameLogic
-    @State var welcomeScreen = 1
+    @State var welcomeScreen = 3
     @State var saturation: Double = 0
     @State var animationFlag = false
+    @State var text = "dd"
     var body: some View {
         ZStack {
             Image("welcomebg")
@@ -139,29 +140,28 @@ struct Welcome: View {
                             .font(.custom(.regular, size: 19))
                             .shadow(color: .black.opacity(0.23), radius: 1, y:1.3)
                         HStack {
-                            Image("tfbg")
-                                .resizableToFit()
-                                .overlay(alignment: .leading) {
-                                    Text("\(vm.lastName)")
-                                        .foregroundStyle(Color("customWhite"))
-                                        .font(.custom(.semibold, size: 16))
-                                        .padding(.leading)
-                                        .shadow(color: .black.opacity(0.23), radius: 2, y:2)
-                                        .opacity(vm.lastNameEdited ? 1 : 0.3)
-                                        .offset(y: 2)
+                                    Image("tfbg")
+                                        .resizableToFit()
+                                        .overlay(alignment: .leading) {
+                                            Text("\(vm.lastName)")
+                                                .foregroundStyle(Color("customWhite"))
+                                                .font(.custom(.semibold, size: 16))
+                                                .padding(.leading)
+                                                .shadow(color: .black.opacity(0.23), radius: 2, y:2)
+                                                .opacity(vm.lastNameEdited ? 1 : 0.3)
+                                                .offset(y: 2)
+                                        }
+                                    
+                                    Button {
+                                        vm.lastName = lastnames.randomElement() ?? "Smith"
+                                        vm.lastNameEdited = true
+                                    } label: {
+                                        Image("editbg")
+                                            .resizableToFit()
+                                            .frame(width: 40)
+                                    }
                                 }
-                            Button {
-                                vm.lastName = lastnames.randomElement() ?? "Smith"
-                           
-                                    vm.lastNameEdited = true
-
-                            } label: {
-                                Image("editbg")
-                                    .resizableToFit()
-                                    .frame(width: 40)
-                            }
                         }
-                    }
                     .offset(y: vm.size.height * 0.07)
                 }
                 .padding(36)
@@ -206,14 +206,7 @@ struct Welcome: View {
             .opacity(welcomeScreen == 2 ? 1 : 0)
             .animation(.easeInOut(duration: 1).delay(1.5),value: welcomeScreen)
             .scaleEffect(welcomeScreen == 3 ? 0 : 1)
-           // .saturation(welcomeScreen == 3 ? 0 : 1)
-         //   .blur(radius: welcomeScreen == 3 ? 5 : 0)
-           // .offset(x: welcomeScreen == 3 ? 700 : 0)
-           // .animation(.easeInOut(duration: 1), value: welcomeScreen)
-       
-        
-                .offset(y: vm.size.height * 0.3)
-            
+            .offset(y: vm.size.height * 0.3)
             
             Button {
                 withAnimation {

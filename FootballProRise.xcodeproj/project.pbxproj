@@ -33,7 +33,6 @@
 		AC2AD5482B8FCA0700BC2183 /* EnergyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5472B8FCA0700BC2183 /* EnergyLevel.swift */; };
 		AC2AD54A2B8FDCED00BC2183 /* NutritionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5492B8FDCED00BC2183 /* NutritionModel.swift */; };
 		AC2AD54C2B8FDEBC00BC2183 /* FoodSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD54B2B8FDEBC00BC2183 /* FoodSlot.swift */; };
-		AC2AD54E2B8FE42A00BC2183 /* EffectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD54D2B8FE42A00BC2183 /* EffectService.swift */; };
 		AC2AD5512B8FEEB800BC2183 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5502B8FEEB800BC2183 /* Gradients.swift */; };
 		AC2AD5542B8FEF3800BC2183 /* ScrollGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5532B8FEF3800BC2183 /* ScrollGradient.swift */; };
 		AC2AD5562B8FF79700BC2183 /* EnergyPlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2AD5552B8FF79700BC2183 /* EnergyPlusView.swift */; };
@@ -61,6 +60,8 @@
 		AC3D8BA72B94FC5900AFF0B0 /* LeagueTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BA62B94FC5900AFF0B0 /* LeagueTableView.swift */; };
 		AC3D8BA92B94FD0B00AFF0B0 /* LeagueTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BA82B94FD0B00AFF0B0 /* LeagueTableCell.swift */; };
 		AC3D8BAB2B9507C600AFF0B0 /* StatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BAA2B9507C600AFF0B0 /* StatModel.swift */; };
+		AC3D8BAD2B95200D00AFF0B0 /* PlayerTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BAC2B95200D00AFF0B0 /* PlayerTF.swift */; };
+		AC3D8BAF2B9520CE00AFF0B0 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BAE2B9520CE00AFF0B0 /* UIApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,7 +93,6 @@
 		AC2AD5472B8FCA0700BC2183 /* EnergyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyLevel.swift; sourceTree = "<group>"; };
 		AC2AD5492B8FDCED00BC2183 /* NutritionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionModel.swift; sourceTree = "<group>"; };
 		AC2AD54B2B8FDEBC00BC2183 /* FoodSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSlot.swift; sourceTree = "<group>"; };
-		AC2AD54D2B8FE42A00BC2183 /* EffectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectService.swift; sourceTree = "<group>"; };
 		AC2AD5502B8FEEB800BC2183 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
 		AC2AD5532B8FEF3800BC2183 /* ScrollGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollGradient.swift; sourceTree = "<group>"; };
 		AC2AD5552B8FF79700BC2183 /* EnergyPlusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyPlusView.swift; sourceTree = "<group>"; };
@@ -120,6 +120,8 @@
 		AC3D8BA62B94FC5900AFF0B0 /* LeagueTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueTableView.swift; sourceTree = "<group>"; };
 		AC3D8BA82B94FD0B00AFF0B0 /* LeagueTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueTableCell.swift; sourceTree = "<group>"; };
 		AC3D8BAA2B9507C600AFF0B0 /* StatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatModel.swift; sourceTree = "<group>"; };
+		AC3D8BAC2B95200D00AFF0B0 /* PlayerTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTF.swift; sourceTree = "<group>"; };
+		AC3D8BAE2B9520CE00AFF0B0 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +158,6 @@
 				AC2AD3FF2B86B6D600BC2183 /* FootballProRiseApp.swift */,
 				AC2AD4012B86B6D600BC2183 /* ContentView.swift */,
 				AC2AD4902B8A6F5C00BC2183 /* GameLogic.swift */,
-				AC2AD54F2B8FE44100BC2183 /* Services */,
 				AC2AD52D2B8DFFB200BC2183 /* Models */,
 				AC2AD4812B89FF6400BC2183 /* Screens */,
 				AC2AD4772B89376100BC2183 /* Components */,
@@ -218,6 +219,7 @@
 				AC3D8B9C2B9403B900AFF0B0 /* AwesomeCarousel.swift */,
 				AC2AD4782B89379100BC2183 /* CarouselView.swift */,
 				AC2AD52B2B8D557900BC2183 /* CarouselView2.swift */,
+				AC3D8BAC2B95200D00AFF0B0 /* PlayerTF.swift */,
 				AC2AD47A2B89468700BC2183 /* CarouselLogic.swift */,
 			);
 			path = Components;
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				AC2AD48A2B8A086400BC2183 /* Image+ext.swift */,
+				AC3D8BAE2B9520CE00AFF0B0 /* UIApplication.swift */,
 				AC3D8BA02B940D1C00AFF0B0 /* AnyTransition+Ext.swift */,
 			);
 			path = Extensions;
@@ -267,14 +270,6 @@
 				AC3D8BAA2B9507C600AFF0B0 /* StatModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		AC2AD54F2B8FE44100BC2183 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				AC2AD54D2B8FE42A00BC2183 /* EffectService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		AC3D8B952B93BCF400AFF0B0 /* Tournament */ = {
@@ -383,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3D8BAF2B9520CE00AFF0B0 /* UIApplication.swift in Sources */,
 				AC2AD47B2B89468700BC2183 /* CarouselLogic.swift in Sources */,
 				AC2AD4912B8A6F5C00BC2183 /* GameLogic.swift in Sources */,
 				AC2AD48D2B8A452D00BC2183 /* Welcome.swift in Sources */,
@@ -401,6 +397,7 @@
 				AC2AD5542B8FEF3800BC2183 /* ScrollGradient.swift in Sources */,
 				AC3D8BA92B94FD0B00AFF0B0 /* LeagueTableCell.swift in Sources */,
 				AC2AD52C2B8D557900BC2183 /* CarouselView2.swift in Sources */,
+				AC3D8BAD2B95200D00AFF0B0 /* PlayerTF.swift in Sources */,
 				AC2AD5462B8FC71300BC2183 /* NutritionView.swift in Sources */,
 				AC3D8BAB2B9507C600AFF0B0 /* StatModel.swift in Sources */,
 				AC2AD4882B8A063400BC2183 /* UserDefaults.swift in Sources */,
@@ -423,7 +420,6 @@
 				AC2AD54C2B8FDEBC00BC2183 /* FoodSlot.swift in Sources */,
 				AC2AD54A2B8FDCED00BC2183 /* NutritionModel.swift in Sources */,
 				AC2AD55A2B90041100BC2183 /* TrainingHeader.swift in Sources */,
-				AC2AD54E2B8FE42A00BC2183 /* EffectService.swift in Sources */,
 				AC2AD4932B8A7AE300BC2183 /* Great.swift in Sources */,
 				AC2AD4852B8A05CB00BC2183 /* Splash.swift in Sources */,
 				AC2AD4002B86B6D600BC2183 /* FootballProRiseApp.swift in Sources */,

@@ -199,6 +199,7 @@ struct MenuView: View {
             .ignoresSafeArea()
             .onAppear {
                 vm.stats = UserDefaultsService.shared.getStructs(forKey: "stats") ?? [StatModel]()
+                vm.trainingsDone = UserDefaultsService.shared.getStructs(forKey: "trainingsDone") ??  [0, 0, 0, 0]
             }
         }
         .navigationViewStyle(.stack)

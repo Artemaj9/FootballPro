@@ -56,7 +56,6 @@
 		AC3D8BA72B94FC5900AFF0B0 /* LeagueTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BA62B94FC5900AFF0B0 /* LeagueTableView.swift */; };
 		AC3D8BA92B94FD0B00AFF0B0 /* LeagueTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BA82B94FD0B00AFF0B0 /* LeagueTableCell.swift */; };
 		AC3D8BAB2B9507C600AFF0B0 /* StatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BAA2B9507C600AFF0B0 /* StatModel.swift */; };
-		AC3D8BAD2B95200D00AFF0B0 /* PlayerTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D8BAC2B95200D00AFF0B0 /* PlayerTF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,7 +110,6 @@
 		AC3D8BA62B94FC5900AFF0B0 /* LeagueTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueTableView.swift; sourceTree = "<group>"; };
 		AC3D8BA82B94FD0B00AFF0B0 /* LeagueTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueTableCell.swift; sourceTree = "<group>"; };
 		AC3D8BAA2B9507C600AFF0B0 /* StatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatModel.swift; sourceTree = "<group>"; };
-		AC3D8BAC2B95200D00AFF0B0 /* PlayerTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTF.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +204,6 @@
 				AC2AD55D2B9006EF00BC2183 /* AnimationBurst.swift */,
 				AC2AD5BB2B912D2D00BC2183 /* Background.swift */,
 				AC3D8B9C2B9403B900AFF0B0 /* AwesomeCarousel.swift */,
-				AC3D8BAC2B95200D00AFF0B0 /* PlayerTF.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -379,7 +376,6 @@
 				AC2AD5C02B91EBF200BC2183 /* TrainOverView.swift in Sources */,
 				AC2AD5542B8FEF3800BC2183 /* ScrollGradient.swift in Sources */,
 				AC3D8BA92B94FD0B00AFF0B0 /* LeagueTableCell.swift in Sources */,
-				AC3D8BAD2B95200D00AFF0B0 /* PlayerTF.swift in Sources */,
 				AC2AD5462B8FC71300BC2183 /* NutritionView.swift in Sources */,
 				AC3D8BAB2B9507C600AFF0B0 /* StatModel.swift in Sources */,
 				AC2AD4882B8A063400BC2183 /* UserDefaults.swift in Sources */,

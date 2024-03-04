@@ -6,10 +6,10 @@ import SwiftUI
 
 struct Welcome: View {
     @EnvironmentObject var vm: GameLogic
-    @State var welcomeScreen = 3
+    @State var welcomeScreen = 1
     @State var saturation: Double = 0
     @State var animationFlag = false
-    @State var text = "dd"
+    
     var body: some View {
         ZStack {
             Image("welcomebg")
@@ -35,7 +35,7 @@ struct Welcome: View {
             
             }
             .padding()
-            .offset(y: -vm.size.height * 0.25)
+            .offset(y: vm.size.width > 380 ? -vm.size.height * 0.25 : -vm.size.height * 0.3)
             .offset(x: welcomeScreen != 1 ? 700 : 0)
             .opacity(welcomeScreen == 1 ? 1 : 0)
             .animation(.easeIn, value: welcomeScreen)
@@ -59,7 +59,7 @@ struct Welcome: View {
             
             }
             .padding()
-            .offset(y: -vm.size.height * 0.25)
+            .offset(y: vm.size.width > 380 ? -vm.size.height * 0.25 : -vm.size.height * 0.3)
             .offset(x: welcomeScreen == 1 ? -700 : welcomeScreen == 2 ? 0 : 700)
             .opacity(welcomeScreen == 2 ? 1 : 0)
             .animation(.easeIn, value: welcomeScreen)
@@ -78,7 +78,7 @@ struct Welcome: View {
                     .shadow(color: .black.opacity(0.23), radius: 1, y:1.3)
                     .padding(.top, 2)
             }
-            .offset(y: -vm.size.height * 0.3)
+            .offset(y: vm.size.width > 380 ? -vm.size.height * 0.3 : -vm.size.height * 0.35)
             .offset(x: -vm.size.width * 0.1)
             .opacity(welcomeScreen == 3 ? 1 : 0)
             .offset(x: welcomeScreen != 3 ? -700 : 0)
@@ -99,7 +99,7 @@ struct Welcome: View {
                 Image("player\(vm.playerIcon)")
                     .resizableToFit()
                     .frame(width: vm.size.width * 0.5)
-                    .offset(y: -vm.size.height * 0.15)
+                    .offset(y: vm.size.width > 380 ? -vm.size.height * 0.15 : -vm.size.height * 0.18)
                 
                 ZStack(alignment: .leading) {
                     Color.clear
@@ -209,8 +209,10 @@ struct Welcome: View {
             .offset(y: vm.size.height * 0.3)
             
             Button {
-                withAnimation {
-                    vm.isWelcome = false
+                if vm.lastNameEdited && vm.nameEdited {
+                    withAnimation {
+                        vm.isWelcome = false
+                    }
                 }
             } label: {
                 Image("btnrect")
@@ -223,7 +225,7 @@ struct Welcome: View {
                             .shadow(color: .black.opacity(0.23), radius: 2, y:3)
                     }
             }
-            .offset(y: vm.size.height * 0.3)
+            .offset(y: vm.size.width > 380 ? vm.size.height * 0.3 : vm.size.height * 0.35)
             .opacity(welcomeScreen == 3 ? 1 : 0)
             .animation(.easeIn(duration: 1), value: welcomeScreen)
             .opacity(vm.lastNameEdited && vm.nameEdited ? 1 : 0.5)

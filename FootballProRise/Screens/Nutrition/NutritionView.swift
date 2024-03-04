@@ -51,7 +51,7 @@ struct NutritionView: View {
                         .environmentObject(vm)
                         .offset(y: 6)
                 }
-                .padding(.top, 60)
+                .padding(.top, vm.size.width > 380 ? 60 : 80)
                 
                 ScrollView(showsIndicators: false)
                 {

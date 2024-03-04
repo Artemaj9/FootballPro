@@ -16,7 +16,7 @@ struct TrainOverView: View {
             
             Image("overtrainrect")
                 .resizableToFit()
-                .frame(width: vm.size.width*0.85, height: vm.size.height*0.7)
+                .frame(width: vm.size.width > 380 ? vm.size.width*0.85 : vm.size.width*0.9, height: vm.size.height*0.7)
                 .offset(y: vm.size.height * 0.03)
                 .opacity(0.71)
                 .overlay(alignment: .bottom) {
@@ -25,7 +25,7 @@ struct TrainOverView: View {
                             .frame(height: 120)
                             .mask {
                                 Text("THE TRAINING\nIS OVER")
-                                    .font(.custom(.black, size: 34))
+                                    .font(.custom(.black, size: vm.size.width > 380 ? 34 : 30))
                                     .multilineTextAlignment(.center)
                                     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 2, y: 2)
                             }
@@ -99,7 +99,7 @@ struct TrainOverView: View {
                                     .resizableToFit()
                             }
                         }
-                        .padding()
+                        .padding(vm.size.width > 380 ? 16 : 4)
                     }
                 }
         }

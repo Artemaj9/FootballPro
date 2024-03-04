@@ -20,14 +20,14 @@ struct LockerRoomView: View {
                     .resizableToFill()
                     .frame(width: 50, height: 50)
             }
-            .offset(x: -vm.size.width * 0.35, y: -vm.size.height*0.33)
+            .offset(x: -vm.size.width * 0.35, y: vm.size.width > 380 ? -vm.size.height*0.33 :  -vm.size.height*0.42 )
             ZStack {
                 borderGrad
                     .frame(width: vm.size.width*0.49, height: vm.size.height*0.2)
                     .mask {
                         Image("player\(vm.playerIcon)")
                             .resizableToFit()
-                            .frame(width: vm.size.width * 0.4)
+                            .frame(width: vm.size.width * 0.38)
                             .scaleEffect(1.03)
                     }
                 Image("player\(vm.playerIcon)")
@@ -46,10 +46,10 @@ struct LockerRoomView: View {
                         
                     }
             }
-            .offset(y: -vm.size.height*0.3)
+            .offset(y: vm.size.width > 380 ? -vm.size.height*0.3 : -vm.size.height*0.38)
             EnergyLevel()
                 .scaleEffect(1.2)
-                .offset(x: vm.size.width*0.35, y: -vm.size.height*0.3)
+                .offset(x: vm.size.width*0.35, y: vm.size.width > 380 ? -vm.size.height*0.3 : -vm.size.height*0.38)
                 .environmentObject(vm)
             
             
@@ -63,7 +63,7 @@ struct LockerRoomView: View {
                         .font(.custom(.semibold, size: 20))
                 }
                 .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 2, y: 2)
-                .offset(y: -vm.size.height*0.15)
+                .offset(y: vm.size.width > 380 ? -vm.size.height*0.15 : -vm.size.height*0.21)
              
             VStack(spacing: 0) {
                 HStack(spacing: 20) {
@@ -200,7 +200,7 @@ struct LockerRoomView: View {
                     ForEach(1..<8) { i in
                     Image("l\(i)")
                             .resizableToFit()
-                            .frame(width: i == 1 ? 45*coef : 33*coef)
+                            .frame(width: i == 1 ? 49*coef : 36*coef)
                             .opacity(vm.league != i ? 0.6 : 1)
                             .scaleEffect(vm.league != i ? 1 : 1.4)
                             .overlay {
@@ -243,7 +243,7 @@ struct LockerRoomView: View {
         .preferredColorScheme(.dark)
         .onAppear {
             if vm.size.width > 400 {
-                coef = 1.2
+                coef = 1.1
             }
         }
     }

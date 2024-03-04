@@ -32,8 +32,8 @@ struct TrainQuestionsView: View {
                 HStack {
                     Text(allQuestions[vm.curTraining][vm.curTrainQuestion[vm.curTraining]].question)
                         .foregroundStyle(Color("customWhite"))
-                        .font(.custom(.medium, size: 24))
-                        .lineSpacing(14)
+                        .font(.custom(.medium, size: vm.size.width > 380 ? 24 : 20))
+                        .lineSpacing(vm.size.width > 380 ? 14 : 10)
                         .padding(.trailing)
                         .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.23), radius: 3, y: 3)
                     
@@ -184,7 +184,7 @@ struct TrainQuestionsView: View {
                             .offset(y: -2)
                         }
                 }
-                .offset(y: vm.size.height * 0.05)
+                .offset(y: vm.size.width>380 ? vm.size.height * 0.05 : vm.size.height*0)
                 
                 Button {
                     if allQuestions[vm.curTraining][vm.curTrainQuestion[vm.curTraining]].rightanswerIndex == vm.selectedAnswer - 1 {
@@ -208,7 +208,7 @@ struct TrainQuestionsView: View {
                         .resizableToFit()
                         .padding(.horizontal, 8)
                 }
-                    .offset(y: vm.size.height * 0.07)
+                .offset(y: vm.size.width>380 ? vm.size.height * 0.07 : vm.size.height * 0.02)
                     
                 
                 Spacer()

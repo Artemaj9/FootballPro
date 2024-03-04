@@ -65,7 +65,7 @@ struct TournamentGameView: View {
                 
                 Text(vm.gameQuestions[vm.currentQuestion].question)
                     .foregroundStyle(Color("customWhite"))
-                    .font(.custom(.medium, size: 24))
+                    .font(.custom(.medium, size: vm.size.width>380 ? 24 : 22))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, vm.size.width * 0.1)
                 

@@ -6,14 +6,13 @@ import SwiftUI
 import Combine
 
 class GameLogic: ObservableObject {
-    @Published var size =  CGSize(width: 430, height: 932)
+    @Published var size = CGSize(width: 430, height: 932)
     @Published var isSplash = true
-  //  @AppStorage("isWelcome") var isWelcome = true
-    @Published var isWelcome = true
+    @AppStorage("isWelcome") var isWelcome = true
 
     @Published var selectedAnswer = 0
     
-    @AppStorage("name") var name = "Andrew"
+    @AppStorage("name") var name = "Bob"
     @AppStorage("lastName") var lastName = "Smith"
     @AppStorage("Icon") var playerIcon = 0
     @AppStorage("balance") var balance = 1000
@@ -39,8 +38,6 @@ class GameLogic: ObservableObject {
     @Published var isEndTraining = false
     @Published var isQuestionView = false
     @Published var coef: Double = 1
-    
-    
     
     // check view
     @Published var checkView = false

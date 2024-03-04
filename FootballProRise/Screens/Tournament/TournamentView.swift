@@ -120,7 +120,7 @@ struct TournamentView: View {
                        
                     }
             }
-            .offset(y: -vm.size.height*0.04)
+            .offset(y: vm.size.width>380 ? -vm.size.height*0.04 : -vm.size.width*0.02)
             
             if vm.isGame {
                 TournamentGameView()
@@ -135,8 +135,8 @@ struct TournamentView: View {
         .overlay(alignment: .bottomTrailing) {
             Image("cup2")
                 .resizableToFit()
-                .frame(width: vm.size.width * 0.45)
-                .offset(y: vm.size.height * 0.04)
+                .frame(width: vm.size.width > 380 ? vm.size.width * 0.45 : vm.size.width*0.4)
+                .offset(y: vm.size.width>380 ? vm.size.height * 0.04 : vm.size.height * 0.08)
                 .opacity(vm.showResult || vm.isEndGame ? 0 : 1)
         }
         .navigationBarHidden(true)

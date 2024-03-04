@@ -100,7 +100,7 @@ struct MenuView: View {
                                 .padding(.bottom, 8)
                                 .padding(.leading)
                         }
-                    HStack(alignment: .bottom) {
+                    HStack(alignment: .bottom, spacing: vm.size.width > 380 ? 16 : 28) {
                         Image("trainings")
                             .resizableToFit()
                             .overlay(alignment: .bottomTrailing) {
@@ -110,12 +110,13 @@ struct MenuView: View {
                                 } label: {
                                     Image("gobtn")
                                         .resizableToFit()
-                                        .padding(24)
+                                        .padding(vm.size.width > 380 ? 24 : 12)
                                 }
                                     .offset(x: 12, y: 8)
                             }
                         Image("nutrition")
                             .resizableToFit()
+                            .padding(.top, vm.size.width > 380 ? 0 : 14)
                             .overlay(alignment: .bottomTrailing) {
                                 NavigationLink {
                                     NutritionView()
@@ -123,10 +124,9 @@ struct MenuView: View {
                                 } label: {
                                     Image("choosebtn")
                                         .resizableToFit()
-                                        .padding(24)
+                                        .padding(vm.size.width > 380 ? 24 : 12)
                                 }
-                                .offset(x: -12, y: 8)
-                                
+                                .offset(x: vm.size.width > 380 ? -12 : -4, y: 8)
                             }
                     }
                     
@@ -147,12 +147,12 @@ struct MenuView: View {
                     
                     Image("tournamentlayer")
                         .resizableToFit()
-                        .padding(.horizontal, 20)
+                        .padding(.horizontal, vm.size.width > 380 ? 20 : 12)
                         .padding(.vertical, 8)
                         .overlay(alignment: .trailing) {
                             Image("menucup")
                                 .resizableToFit()
-                                .scaleEffect(1.15)
+                                .scaleEffect(vm.size.width > 380 ? 1.15 : 1)
                                 .offset(x: -10, y: -40)
                         }
                         .overlay(alignment:.bottom) {
@@ -188,7 +188,7 @@ struct MenuView: View {
                                             .offset(y: 2)
                                     }
                                 }
-                                .padding(.horizontal, 44)
+                                .padding(.horizontal, vm.size.width > 380 ? 44 : 30)
                                 .padding(.top, 24)
                             }
                         }

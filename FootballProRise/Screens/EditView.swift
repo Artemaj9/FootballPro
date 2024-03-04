@@ -25,7 +25,7 @@ struct EditView: View {
                             .padding(.top)
                     }
                 }
-            AwesomeCarousel(itemHeight: 234, views: Array(repeating: AnyView(Text("")), count: 9))
+            AwesomeCarousel(itemHeight: vm.size.width > 380 ?  234 : 200, views: Array(repeating: AnyView(Text("")), count: 9))
                 .environmentObject(vm)
                 .padding(.horizontal, 80)
                 .mask {
@@ -109,7 +109,7 @@ struct EditView: View {
                     }
             }
             
-            .offset(y: vm.size.height * 0.32)
+            .offset(y: vm.size.width > 380 ? vm.size.height * 0.32 : vm.size.height * 0.38)
         }
         .onAppear {
             vm.oldIcon = vm.playerIcon

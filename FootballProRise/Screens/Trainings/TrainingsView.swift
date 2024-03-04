@@ -9,9 +9,10 @@ struct TrainingsView: View {
     
     var body: some View {
         ZStack {
-            Image("welcomebg")
-                .resizableToFill()
-                .scaleEffect(1.01)
+            Background(image: "welcomebg")
+//            Image("welcomebg")
+//                .resizableToFill()
+//                .scaleEffect(1.01)
             GradAnimation(color: "sea")
             
             VStack {
@@ -157,7 +158,7 @@ struct TrainingsView: View {
                                 Button {
                                     if vm.energyLevel >= 50 {
                                         vm.curTraining = 3
-                                        vm.curTrainQuestion[2] = vm.trainingsDone[2]*5
+                                        vm.curTrainQuestion[3] = vm.trainingsDone[3]*5
                                         vm.isQuestionView = true
                                     }
                                 } label: {
@@ -175,7 +176,7 @@ struct TrainingsView: View {
                 
                 Spacer()
             }
-            .offset(y: vm.size.height * 0.1)
+            .offset(y: vm.size.width > 380 ? vm.size.height * 0.1 : vm.size.height*0.03)
             
             if vm.isQuestionView {
                 TrainQuestionsView()

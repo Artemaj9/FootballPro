@@ -3,18 +3,24 @@
 //
 
 import SwiftUI
+import Combine
 
 struct Welcome: View {
     @EnvironmentObject var vm: GameLogic
     @State var welcomeScreen = 1
     @State var saturation: Double = 0
     @State var animationFlag = false
+    @State private var keyboardHeight: CGFloat = 0
     
     var body: some View {
         ZStack {
-            Image("welcomebg")
-                .resizableToFill()
-                .scaleEffect(1.01)
+//            Image("welcomebg")
+//                .resizableToFill()
+//                .scaleEffect(1.01)
+            Background(image: "welcomebg")
+                .onTapGesture {
+                    UIApplication.shared.endEditing()
+                }
           //  GradAnimation(color: "sea")
             
             if animationFlag {
@@ -83,9 +89,8 @@ struct Welcome: View {
             .opacity(welcomeScreen == 3 ? 1 : 0)
             .offset(x: welcomeScreen != 3 ? -700 : 0)
             .animation(.easeInOut, value: welcomeScreen)
-            
-            
-            
+            .opacity(keyboardHeight > 0 ? 0 : 1)
+            .animation(.easeOut, value: keyboardHeight)
             
             AwesomeCarousel(itemHeight: vm.size.height*0.3, views: Array(repeating: AnyView(Text("")), count: 9))
                 .environmentObject(vm)
@@ -110,18 +115,28 @@ struct Welcome: View {
                             .font(.custom(.regular, size: 19))
                             .shadow(color: .black.opacity(0.23), radius: 1, y:1.3)
                         HStack {
-                            Image("tfbg")
-                                .resizableToFit()
-                                .overlay(alignment: .leading) {
-                                    Text("\(vm.name)")
-                                        .foregroundStyle(Color("customWhite"))
-                                        .font(.custom(.medium, size: 16))
-                                        .padding(.leading)
-                                        .shadow(color: .black.opacity(0.23), radius: 2, y:2)
-                                        .opacity(vm.nameEdited ? 1 : 0.3)
-                                        .animation(.easeInOut, value: vm.nameEdited)
-                                        .offset(y: 2)
+                            
+                            PlayerTF(text: $vm.name)
+                                .environmentObject(vm)
+                                .onTapGesture {
+                                    if vm.name != "" {
+                                        vm.nameEdited = true
+                                    }
                                 }
+                                
+                            
+//                            Image("tfbg")
+//                                .resizableToFit()
+//                                .overlay(alignment: .leading) {
+//                                    Text("\(vm.name)")
+//                                        .foregroundStyle(Color("customWhite"))
+//                                        .font(.custom(.medium, size: 16))
+//                                        .padding(.leading)
+//                                        .shadow(color: .black.opacity(0.23), radius: 2, y:2)
+//                                        .opacity(vm.nameEdited ? 1 : 0.3)
+//                                        .animation(.easeInOut, value: vm.nameEdited)
+//                                        .offset(y: 2)
+//                                }
                             Button {
                                 vm.nameEdited = true
                                 vm.name = names.randomElement() ?? "John"
@@ -140,17 +155,24 @@ struct Welcome: View {
                             .font(.custom(.regular, size: 19))
                             .shadow(color: .black.opacity(0.23), radius: 1, y:1.3)
                         HStack {
-                                    Image("tfbg")
-                                        .resizableToFit()
-                                        .overlay(alignment: .leading) {
-                                            Text("\(vm.lastName)")
-                                                .foregroundStyle(Color("customWhite"))
-                                                .font(.custom(.semibold, size: 16))
-                                                .padding(.leading)
-                                                .shadow(color: .black.opacity(0.23), radius: 2, y:2)
-                                                .opacity(vm.lastNameEdited ? 1 : 0.3)
-                                                .offset(y: 2)
-                                        }
+                            PlayerTF(text: $vm.lastName)
+                                .environmentObject(vm)
+                                .onTapGesture {
+                                    if vm.lastName != "" {
+                                        vm.lastNameEdited = true
+                                    }
+                                }
+//                                    Image("tfbg")
+//                                        .resizableToFit()
+//                                        .overlay(alignment: .leading) {
+//                                            Text("\(vm.lastName)")
+//                                                .foregroundStyle(Color("customWhite"))
+//                                                .font(.custom(.semibold, size: 16))
+//                                                .padding(.leading)
+//                                                .shadow(color: .black.opacity(0.23), radius: 2, y:2)
+//                                                .opacity(vm.lastNameEdited ? 1 : 0.3)
+//                                                .offset(y: 2)
+//                                        }
                                     
                                     Button {
                                         vm.lastName = lastnames.randomElement() ?? "Smith"
@@ -170,6 +192,8 @@ struct Welcome: View {
             .opacity(welcomeScreen == 3 ? 1 : 0)
             .animation(.easeInOut, value: vm.lastNameEdited)
             .animation(.easeInOut(duration: 2), value: welcomeScreen)
+            .offset(y: keyboardHeight > 0 ? -vm.size.height*0.2 : 0)
+            .animation(.easeOut, value: keyboardHeight)
             
             Button {
                 welcomeScreen = 2
@@ -209,7 +233,7 @@ struct Welcome: View {
             .offset(y: vm.size.height * 0.3)
             
             Button {
-                if vm.lastNameEdited && vm.nameEdited {
+                if vm.lastNameEdited && vm.nameEdited && vm.name != "" && vm.lastName != "" {
                     withAnimation {
                         vm.isWelcome = false
                     }
@@ -228,11 +252,14 @@ struct Welcome: View {
             .offset(y: vm.size.width > 380 ? vm.size.height * 0.3 : vm.size.height * 0.35)
             .opacity(welcomeScreen == 3 ? 1 : 0)
             .animation(.easeIn(duration: 1), value: welcomeScreen)
-            .opacity(vm.lastNameEdited && vm.nameEdited ? 1 : 0.5)
+            .opacity(vm.lastNameEdited && vm.nameEdited && vm.name != "" && vm.lastName != "" ? 1 : 0.5)
             .animation(.easeIn(duration: 1), value: vm.lastNameEdited && vm.nameEdited)
             
         }
         .ignoresSafeArea()
+        .onReceive(Publishers.keyboardHeight) { self.keyboardHeight = $0
+        }
+     //   .ignoresSafeArea(.keyboard)
     }
 }
 

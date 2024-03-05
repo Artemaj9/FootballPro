@@ -5,7 +5,7 @@
 import SwiftUI
 
 @main
-struct FootballProRiseApp: App {
+ struct FootballProRiseApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

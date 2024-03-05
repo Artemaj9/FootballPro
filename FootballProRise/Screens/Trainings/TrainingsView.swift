@@ -173,7 +173,6 @@ struct TrainingsView: View {
                             .padding(.horizontal, 8)
                         }
                 }
-                
                 Spacer()
             }
             .offset(y: vm.size.width > 380 ? vm.size.height * 0.1 : vm.size.height*0.03)

@@ -115,9 +115,7 @@ struct TournamentView: View {
                         }
                         .foregroundStyle(Color("customWhite"))
                         .multilineTextAlignment(.center)
-                        .lineSpacing(4)
-                        
-                       
+                        .lineSpacing(4)   
                     }
             }
             .offset(y: vm.size.width>380 ? -vm.size.height*0.04 : -vm.size.width*0.02)

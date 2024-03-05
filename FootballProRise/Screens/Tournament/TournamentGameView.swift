@@ -6,11 +6,26 @@ import SwiftUI
 
 struct TournamentGameView: View {
     @EnvironmentObject var vm: GameLogic
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         ZStack {
             Background(image: "fieldbg")
+         
             Color("darkbg")
+                .overlay(alignment: .topTrailing) {
+                    Button {
+                        vm.resetGame()
+                        dismiss()
+                    } label: {
+                        Image("exit")
+                            .resizableToFit()
+                            .frame(width: vm.size.width > 380 ? 36 : 30 ,  height: vm.size.width > 380 ? 36 : 30)
+                            .padding(.horizontal, vm.size.width > 380 ? 30 : 8)
+                            .padding(.top, vm.size.width > 380 ? vm.size.height*0.06 : vm.size.height*0.04)
+                            .opacity(0.8)
+                    }
+                }
             VStack(spacing: 20) {
                 HStack(spacing: 20) {
                     Image("league\(vm.league)")
